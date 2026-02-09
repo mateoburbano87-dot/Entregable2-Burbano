@@ -1,0 +1,7 @@
+// Reset CSS básico para normalizar estilos entre navegadores
+
+* { /* Selector universal */
+	margin: 0; /* Elimina margen por defecto */
+	padding: 0; /* Elimina padding por defecto */
+	box-sizing: inherit; /* Hereda el box-sizing */
+} /

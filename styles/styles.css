@@ -1,0 +1,1231 @@
+/* Hoja de estilos principal: layout, tarjetas, formulario, carrito y footer */
+
+/* ========================================================================== */
+/*                           SECCIÓN: GENERAL                                 */
+/* ========================================================================== */
+
+/* reset  universal */
+
+* { 
+	margin: 0; /* Elimina margen por defecto */
+	padding: 0; /* Elimina padding por defecto */
+	box-sizing: inherit; /* Hereda el box-sizing */
+} 
+
+/* Estilos generales del body */
+
+body { 
+	background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #1a1a2e 100%); /* Fondo degradado */
+	background-attachment: fixed; /* Fija el fondo */
+	color: #e0e0e0; /* Color base del texto */
+	font-family: '' Segoe UI'', Tahoma, Geneva, Verdana, sans-serif; /* Fuente principal */
+	line-height: 1.6; /* Altura de línea */
+	min-height: 100vh; /* Altura mínima de pantalla */
+} 
+
+/* ========================================================================== */
+/*                           SECCIÓN: HEADER & NAV                            */
+/* ========================================================================== */
+
+/* Estilos para el header */
+
+header { 
+	background: rgba(26, 26, 46, 0.6); /* Fondo semi-transparente */
+	backdrop-filter: blur(0.625rem); /* Desenfoque del fondo */
+	padding: 1.25rem 0; /* Espaciado vertical */
+	position: relative; /* Posicionamiento relativo */
+	z-index: 999; /* Prioridad de apilamiento */
+} 
+
+/* Estilos del collapse del nav */
+
+header .navbar .navbar-collapse { 
+	margin-left: 20rem; /* Margen izquierdo */
+} 
+
+/* Contenedor centrado del nav */
+
+header .nav-container-centered { 
+	max-width: 1200px; /* Ancho máximo */
+	margin: 0 auto; /* Centra el contenedor */
+} 
+
+/* Ajustes del collapse centrado */
+
+header .nav-container-centered .navbar-collapse { 
+	margin-left: 0; /* Elimina margen izquierdo */
+	justify-content: center; /* Centra el contenido */
+} 
+
+/* Lista del nav */
+
+header .navbar .navbar-nav { 
+	gap: 5rem; /* Espacio entre items */
+} 
+
+ /* Estilos del título principal */
+
+header .titulo_web {
+	font-family: "Nabla", system-ui; /* Fuente del título */
+	color: #00d4ff; /* Color del título */
+	font-size: 4rem; /* Tamaño del título */
+	font-weight: 400; /* Grosor de la fuente */
+	letter-spacing: 0.125rem; /* Espaciado entre letras */
+	margin: 0; /* Quita margen */
+	text-transform: uppercase; /* Pasa a mayúsculas */
+	text-shadow: 0 0.25rem 0.5rem rgba(0, 212, 255, 0.3); /* Sombra del texto */
+	transition: all 0.3s ease; /* Transiciones suaves */
+	line-height: 1; /* Altura de línea */
+	filter: grayscale(1) brightness(1.3) contrast(1.2) hue-rotate(180deg) saturate(3); /* Efecto del título */
+} 
+
+/* Contenedor del header */
+
+.header_container { 
+	display: flex; /* Usa flexbox */
+	flex-direction: row; /* Dirección en fila */
+	align-items: center; /* Centra verticalmente */
+	gap: 1.5rem; /* Separación entre elementos */
+	justify-content: center; /* Centra horizontalmente */
+} 
+
+ /* Imagen del logo */
+
+.header_container .logo img {
+	max-height: 15rem; /* Alto máximo del logo */
+	filter: brightness(0.9) drop-shadow(0 0.25rem 0.5rem rgba(0, 212, 255, 0.3)); /* Filtro del logo */
+	transition: all 0.3s ease; /* Transición suave */
+} 
+
+/* Estilos base del nav */
+
+nav { 
+	font-family: "Germania One", system-ui; /* Fuente del nav */
+} 
+
+/* Fondo personalizado del navbar */
+
+header .custom-navbar { 
+	background-color: rgba(26, 26, 46, 0.7); /* Color de fondo */
+	position: relative; /* Referencia para el dropdown */
+} 
+
+/* Estilos del texto de marca */
+
+.navbar-brand { 
+	color: #00d4ff; /* Color del texto */
+	font-size: 3rem; /* Tamaño de fuente */
+	font-weight: 700; /* Grosor de fuente */
+	transition: color 0.3s ease; /* Transición de color */
+	margin-left: 10rem; /* Margen izquierdo */
+} 
+
+/* Hover del brand */
+
+.navbar-brand:hover { 
+	color: #00aaff; /* Color al pasar el mouse */
+} 
+
+/* Enlaces del nav */
+
+.navbar-nav .nav-link, 
+.dropdown-menu .dropdown-item { /* Items del dropdown */
+	color: #c7d2ff; /* Color de enlaces */
+	font-size: 2.5rem; /* Tamaño de fuente */
+	font-weight: 500; /* Grosor de fuente */
+	transition: color 0.2s ease, background-color 0.2s ease, text-shadow 0.2s ease; /* Transiciones */
+} 
+
+.navbar-nav .nav-link:hover, /* Hover del link */
+.navbar-nav .nav-link:focus, /* Focus del link */
+.navbar-nav .nav-link.active, /* Link activo */
+.dropdown-menu .dropdown-item:hover, /* Hover del item */
+.dropdown-menu .dropdown-item:focus, /* Focus del item */
+.dropdown-menu .dropdown-item.active { /* Item activo */
+	color: #00d4ff; /* Color al activar */
+	text-shadow: 0 0 8px rgba(0, 212, 255, 0.6); /* Sombra del texto */
+} 
+
+header .hover-text-only .navbar-nav .nav-link:hover, /* Hover sin fondo */
+header .hover-text-only .navbar-nav .nav-link:focus, /* Focus sin fondo */
+header .hover-text-only .navbar-nav .nav-link.active, /* Activo sin fondo */
+header .hover-text-only .dropdown-menu .dropdown-item:hover, /* Hover dropdown */
+header .hover-text-only .dropdown-menu .dropdown-item:focus, /* Focus dropdown */
+header .hover-text-only .dropdown-menu .dropdown-item.active { /* Activo dropdown */
+	color: #00d4ff; /* Color del texto */
+	background-color: transparent; /* Sin fondo */
+	text-shadow: none; /* Sin sombra */
+} 
+
+/* Dropdown dentro del flujo */
+
+header .custom-navbar .dropdown-menu { 
+	position: absolute; /* Flota bajo la nav */
+	top: 100%; /* Debajo del navbar */
+	left: 50%; /* Centra horizontalmente */
+	transform: translateX(-50%); /* Ajusta al centro */
+	background-color: rgba(26, 26, 46, 0.7); /* Fondo igual a la nav */
+	padding: 0.25rem; /* Padding del menú */
+	border-radius: 0.75rem; /* Bordes redondeados */
+	overflow: visible; /* Permite desbordes */
+} 
+
+/* Dropdown visible en flujo */
+
+header .custom-navbar .dropdown-menu.show { 
+	display: block; /* Ocupa espacio */
+} 
+
+/* Tamaño del logo */
+
+.logo-size { 
+	width: 20rem; /* Ancho del logo */
+	height: auto; /* Alto automático */
+} 
+
+/* Contenedor de submenú */
+
+.dropdown-submenu { 
+	position: relative; /* Posición relativa */
+} 
+
+/* Submenú abierto sin superposición */
+
+.dropdown-submenu-open > .dropdown-menu { 
+	position: static; /* Mismo flujo */
+	display: block; /* Visible */
+	margin-top: 0.25rem; /* Separación */
+}
+
+/* Oculta el título del submenú */
+
+.dropdown-submenu-open > .dropdown-item.dropdown-toggle { 
+	display: none; /* Oculta el item principal */
+} 
+
+/* Oculta opciones del menú padre */
+
+.submenu-parent-hidden > li:not(.dropdown-submenu-open) { 
+	display: none; /* Oculta items */
+} 
+
+/* Submenú horizontal visible */
+
+header .submenu-horizontal .dropdown-menu.show { 
+	display: flex; /* Usa flexbox */
+	flex-direction: row; /* Dirección en fila */
+	align-items: center; /* Centra verticalmente */
+	gap: 1rem; /* Separación entre items */
+	white-space: nowrap; /* Evita saltos de línea */
+} 
+
+/* Submenú centrado visible */
+
+header .submenu-centered .dropdown-menu.show { 
+	position: absolute; /* Flota bajo la nav */
+	left: 50%; /* Centra horizontalmente */
+	transform: translateX(-50%); /* Ajusta al centro */
+	z-index: 1000; /* Prioridad de apilamiento */
+	justify-content: center; /* Centra dentro del dropdown */
+} 
+
+/* Espacio para dropdown abierto */
+
+header.nav-submenu-open { 
+	padding-bottom: 4.5rem; /* Evita tapar el contenido */
+} 
+
+/* Items del submenú */
+
+header .submenu-horizontal .dropdown-menu .dropdown-item { 
+	white-space: nowrap; /* Evita saltos */
+} 
+
+/* Contenedor del botón volver */
+
+.submenu-back-item { 
+	border-bottom: 1px solid rgba(0, 212, 255, 0.25); /* Separador */
+	margin-bottom: 0.25rem; /* Espacio inferior */
+} 
+
+/* Botón volver */
+
+.dropdown-submenu .submenu-back {
+	font-weight: 600; /* Énfasis */
+	color: #00d4ff; /* Color destacado */
+} 
+
+/* ========================================================================== */
+/*                           SECCIÓN: PRODUCTOS                               */
+/* ========================================================================== */
+
+/* Sección de productos */
+
+.featured-section { 
+	padding: 4rem 1.5rem 6rem; /* Espaciado de la sección */
+} 
+
+/* Contenedor de la sección */
+
+.featured-container { 
+	max-width: 1200px; /* Ancho máximo */
+	margin: 0 auto; /* Centrado */
+	text-align: center; /* Texto centrado */
+} 
+
+/* Título de la sección */
+
+.featured-title { 
+	font-family: "Germania One", system-ui; /* Fuente del título */
+	font-size: 3rem; /* Tamaño del título */
+	color: #00d4ff; /* Color del título */
+	margin-bottom: 0.5rem; /* Margen inferior */
+} 
+
+/* Subtítulo de la sección */
+
+.featured-subtitle { 
+	font-family: "DM Serif Text", serif;
+	font-size: 2rem; /* Tamaño del subtítulo */
+	color: #c7d2ff; /* Color del subtítulo */
+	margin-bottom: 2.5rem; /* Margen inferior */
+} 
+
+/* Grilla de productos */
+
+.featured-grid { 
+	display: grid; /* Usa grid */
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Columnas automáticas */
+	gap: 2rem; /* Espacio entre tarjetas */
+	justify-content: center; /* Centra las tarjetas */
+} 
+
+/* Grilla fija de 3 columnas */
+
+.featured-grid-3 { 
+	grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columnas */
+} 
+
+/* Grilla de destacados 5 columnas */
+
+.featured-grid-featured { 
+	grid-template-columns: repeat(5, minmax(500px, 1fr)); /* 5 columnas con tamaño mínimo y cambiar tamaño de las card*/
+} 
+
+/* Card de producto */
+
+.featured-card { 
+	background: rgba(26, 26, 46, 0.6); /* Fondo de la tarjeta */
+	border-radius: 1.25rem; /* Bordes redondeados */
+	overflow: hidden; /* Oculta desbordes */
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.35); /* Sombra */
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición */
+} 
+
+/* Texto en mayúsculas dentro de la card */
+
+.featured-card-uppercase { 
+	text-transform: uppercase; /* Convierte todo el texto */
+} 
+
+/* Imagen grande */
+
+.featured-card-lg .featured-image { 
+	height: 500px; /* Alto de imagen */
+} 
+
+/* Cuerpo grande */
+
+.featured-card-lg .featured-body { 
+	padding: 2rem; /* Padding extra */
+} 
+
+/* Nombre grande */
+
+.featured-card-lg .featured-name { 
+	font-size: 1.75rem; /* Tamaño del nombre */
+} 
+
+/* Descripción grande */
+
+.featured-card-lg .featured-desc { 
+	font-size: 1.1rem; /* Tamaño de la descripción */
+} 
+
+/* Hover de tarjeta */
+
+.featured-card:hover { 
+	transform: translateY(-6px); /* Eleva la tarjeta */
+	box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.4); /* Aumenta la sombra */
+} 
+
+/* Imagen grande */
+
+.featured-card-lg .featured-image { 
+	height: 600px; /* Alto de imagen */
+} 
+
+/* Card ancha */
+
+.featured-card-wide { 
+	grid-column: span 2; /* Ocupa 2 columnas */
+} 
+
+/* Card muy ancha */
+
+.featured-card-extra-wide { 
+	grid-column: span 3; /* Ocupa 3 columnas */
+} 
+
+/* Imagen del producto */
+
+.featured-image { 
+	width: 100%; /* Ancho completo */
+	height: 200px; /* Alto de imagen */
+	object-fit: cover; /* Ajusta imagen */
+	object-position: center; /* Centra la imagen */
+	background: linear-gradient(135deg, rgba(0, 212, 255, 0.35), rgba(15, 52, 96, 0.6)); /* Fondo de respaldo */
+} 
+
+/* Imagen completa */
+
+.featured-image-contain { 
+	object-fit: contain; /* Muestra toda la imagen */
+	background: rgba(15, 52, 96, 0.25); /* Fondo suave */
+} 
+
+
+.featured-image-sm {
+	height: 260px; /* Alto de imagen */
+} 
+
+/* Tamaño grande directo en la imagen */
+
+.featured-image-lg { 
+	height: 550px; /* Alto de imagen */
+} 
+
+/* Tamaño alto directo en la imagen */
+
+.featured-image-tall { 
+	height: 420px; /* Alto de imagen */
+} 
+
+/* Imagen alta por card */
+
+.featured-card-tall .featured-image { 
+	height: 420px; /* Alto de imagen */
+} /* Cierra imagen alta */
+.featured-body { /* Cuerpo de la tarjeta */
+	padding: 1.5rem; /* Padding interno */
+	text-align: left; /* Texto alineado a la izquierda */
+}
+
+ /* Nombre del producto */
+
+.featured-name {
+	font-size: 1.5rem; /* Tamaño del nombre */
+	color: #e0e0e0; /* Color del nombre */
+	margin-bottom: 0.5rem; /* Margen inferior */
+} 
+
+/* Descripción del producto */
+
+.featured-desc { 
+	color: #a9b7ff; /* Color de descripción */
+	margin-bottom: 1.25rem; /* Margen inferior */
+} 
+
+/* Precio del producto */
+
+.featured-price { 
+	color: #f2f6ff; /* Color */
+	font-weight: 700; /* Grosor */
+	margin-bottom: 1rem; /* Margen */
+} 
+
+/* Botón de la tarjeta */
+
+.featured-button { 
+	background: transparent; /* Fondo transparente */
+	border: 1px solid #00d4ff; /* Borde del botón */
+	color: #00d4ff; /* Color del texto */
+	padding: 0.6rem 1.4rem; /* Padding del botón */
+	border-radius: 999px; /* Bordes redondos */
+	font-weight: 600; /* Grosor del texto */
+	transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease; /* Transiciones */
+} 
+
+/* Hover del botón */
+
+.featured-button:hover { 
+	background-color: #00d4ff; /* Fondo al hover */
+	color: #0a0a0a; /* Color del texto */
+	transform: translateY(-2px); /* Movimiento suave */
+} 
+
+/* ========================================================================== */
+/*                           SECCIÓN: ENVÍO                                   */
+/* ========================================================================== */
+
+/* Sección de datos de envío */
+
+.shipping-section { 
+	padding: 4rem 1.5rem 6rem; /* Espaciado */
+} 
+
+/* Contenedor de la sección */
+
+.shipping-container { 
+	max-width: 1200px; /* Ancho máximo */
+	margin: 0 auto; /* Centrado */
+	text-align: center; /* Texto centrado */
+} 
+
+/* Título */
+
+.shipping-title { 
+	font-family: "Germania One", system-ui; /* Fuente */
+	font-size: 3rem; /* Tamaño */
+	color: #00d4ff; /* Color */
+	margin-bottom: 0.5rem; /* Margen */
+} 
+
+/* Subtítulo */
+
+.shipping-subtitle { 
+	color: #c7d2ff; /* Color */
+	margin-bottom: 2.5rem; /* Margen */
+} 
+
+/* Tarjeta del formulario */
+
+.shipping-card { 
+	background: rgba(26, 26, 46, 0.6); /* Fondo */
+	border-radius: 1.25rem; /* Bordes */
+	padding: 2rem; /* Espaciado */
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.35); /* Sombra */
+	text-align: left; /* Texto a la izquierda */
+} 
+
+/* Grilla del formulario */
+
+.shipping-grid { 
+	display: grid; /* Grid */
+	grid-template-columns: repeat(2, minmax(0, 1fr)); /* Dos columnas */
+	gap: 1.5rem; /* Espaciado */
+} 
+
+/* Campo */
+
+.shipping-field { 
+	display: flex; /* Flex */
+	flex-direction: column; /* Columna */
+	gap: 0.5rem; /* Espaciado */
+} 
+
+/* Campo ancho */
+
+.shipping-field-full { 
+	grid-column: span 2; /* Ocupar dos columnas */
+} 
+
+/* Label */
+
+.shipping-label { 
+	color: #e0e0e0; /* Color */
+	font-weight: 600; /* Grosor */
+} 
+
+/* Inputs */
+
+.shipping-input,
+.shipping-select,
+.shipping-textarea { 
+	background: rgba(15, 52, 96, 0.5); /* Fondo */
+	border: 1px solid rgba(0, 212, 255, 0.35); /* Borde */
+	border-radius: 0.75rem; /* Bordes */
+	color: #f2f6ff; /* Color */
+	padding: 0.75rem 1rem; /* Espaciado */
+	outline: none; /* Sin outline */
+} 
+
+/* Focus */
+
+.shipping-input:focus,
+.shipping-select:focus,
+.shipping-textarea:focus { 
+	border-color: #00d4ff; /* Borde */
+	box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.2); /* Sombra */
+} 
+
+/* Acciones */
+
+.shipping-actions { 
+	margin-top: 1.5rem; /* Margen */
+	display: flex; /* Flex */
+	flex-wrap: wrap; /* Ajuste */
+	align-items: center; /* Centrado */
+	gap: 1rem; /* Espaciado */
+}
+
+/* Botón */
+
+.shipping-button { 
+	background: transparent; /* Fondo */
+	border: 1px solid #00d4ff; /* Borde */
+	color: #00d4ff; /* Color */
+	padding: 0.6rem 1.6rem; /* Espaciado */
+	border-radius: 999px; /* Bordes */
+	font-weight: 600; /* Grosor */
+	transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease; /* Transición */
+} 
+
+/* Hover botón */
+
+.shipping-button:hover { 
+	background-color: #00d4ff; /* Fondo */
+	color: #0a0a0a; /* Color */
+	transform: translateY(-2px); /* Movimiento */
+} 
+
+/* Texto ayuda */
+
+.shipping-helper { 
+	color: #a9b7ff; /* Color */
+} 
+
+/* Mensaje */
+
+.form-message { 
+	margin-top: 1.25rem; /* Margen */
+	font-weight: 600; /* Grosor */
+} 
+
+/* Mensaje éxito */
+
+.form-message--success { 
+	color: #6ef2a6; /* Color */
+} 
+
+/* Mensaje error */
+
+.form-message--error { 
+	color: #ff8a8a; /* Color */
+} 
+
+/* Responsive */
+
+@media (max-width: 768px) { 
+	.shipping-grid {
+		grid-template-columns: 1fr; /* Una columna */
+	}
+	.shipping-field-full {
+		grid-column: span 1; /* Una columna */
+	}
+}
+
+/* ========================================================================== */
+/*                           SECCIÓN: MARCAS                                  */
+/* ========================================================================== */
+
+/* Sección de marcas */
+
+.brands-section { 
+	padding: 2rem 1.5rem 6rem; /* Espaciado */
+} 
+
+/* Contenedor de marcas */
+
+.brands-container { 
+	max-width: 1200px; /* Ancho máximo */
+	margin: 0 auto; /* Centrado */
+	text-align: center; /* Texto centrado */
+} 
+
+/* Título de marcas */
+
+.brands-title { 
+	font-family: "Germania One", system-ui; /* Fuente */
+	font-size: 2.5rem; /* Tamaño */
+	color: #00d4ff; /* Color */
+	margin-bottom: 0.5rem; /* Margen inferior */
+} 
+
+/* Subtítulo de marcas */
+
+.brands-subtitle { 
+	color: #c7d2ff; /* Color del subtítulo */
+	margin-bottom: 2rem; /* Margen inferior */
+} 
+
+/* Contenedor del carrusel */
+
+.brands-carousel { 
+	position: relative; /* Posicionamiento relativo */
+	padding: 0 2.5rem; /* Espaciado lateral */
+} 
+
+/* Pista del carrusel */
+
+.brands-track { 
+	display: grid; /* Usa grid */
+	grid-auto-flow: column; /* Flujo horizontal */
+	grid-auto-columns: minmax(160px, 1fr); /* Ancho de columnas */
+	gap: 1rem; /* Separación */
+	overflow: hidden; /* Oculta exceso */
+	align-items: center; /* Centra verticalmente */
+	background: linear-gradient(135deg, rgba(20, 30, 60, 0.95), rgba(15, 52, 96, 0.85)); /* Fondo */
+	padding: 1.25rem; /* Padding */
+	border-radius: 1.25rem; /* Bordes redondeados */
+	box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.35); /* Sombra */
+} 
+
+/* Tarjeta del logo */
+
+.brands-item { 
+	background: rgba(38, 48, 86, 0.9); /* Fondo de la tarjeta */
+	border-radius: 0.9rem; /* Bordes redondeados */
+	padding: 0.75rem 1rem; /* Padding */
+	display: grid; /* Usa grid */
+	place-items: center; /* Centra contenido */
+	box-shadow: inset 0 0 0 1px rgba(0, 212, 255, 0.1); /* Borde interno */
+} 
+
+/* Imagen del logo */
+
+.brands-logo { 
+	width: 100%; /* Ancho completo */
+	max-width: 140px; /* Ancho máximo */
+	height: 70px; /* Alto fijo */
+	object-fit: contain; /* Ajuste de imagen */
+	margin: 0 auto; /* Centra imagen */
+	filter: drop-shadow(0 0.25rem 0.5rem rgba(0, 212, 255, 0.25)); /* Sombra del logo */
+} 
+
+/* Botones del carrusel */
+
+.brands-button { 
+	position: absolute; /* Posicionamiento absoluto */
+	top: 50%; /* Centrado vertical */
+	transform: translateY(-50%); /* Ajuste vertical */
+	border: none; /* Sin borde */
+	background: #2b3a6b; /* Fondo del botón */
+	color: #9fe7ff; /* Color del texto */
+	width: 44px; /* Ancho */
+	height: 44px; /* Alto */
+	border-radius: 50%; /* Botón circular */
+	font-size: 1.25rem; /* Tamaño del icono */
+	box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.35); /* Sombra */
+	transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease; /* Transición */
+} 
+
+/* Posición del botón anterior */
+
+.brands-button#brandsPrev { 
+	left: 0; /* Alinea a la izquierda */
+} 
+
+/* Posición del botón siguiente */
+
+.brands-button#brandsNext { 
+	right: 0; /* Alinea a la derecha */
+} 
+
+/* Hover de botones */
+
+.brands-button:hover { 
+	background-color: #00d4ff; /* Fondo al hover */
+	color: #0a0a0a; /* Color del texto */
+	transform: translateY(-50%) scale(1.05); /* Efecto de escala */
+} 
+
+/* ========================================================================== */
+/*                           SECCIÓN: CONTACTO                                */
+/* ========================================================================== */
+
+/* Contenedor principal */
+
+.contacto-section { 
+	padding: 4rem 1.5rem 5rem; /* Espaciado */
+	background: linear-gradient(180deg, #2a325b 0%, #2d3a6f 100%); /* Fondo */
+} 
+
+/* Título de sección */
+
+.contacto-section .section-title { 
+	font-family: "Germania One", system-ui; /* Fuente */
+	font-size: 3rem; /* Tamaño */
+	letter-spacing: 0.08rem; /* Espaciado */
+	text-transform: uppercase; /* Mayúsculas */
+	color: #f2f6ff; /* Color */
+	margin-bottom: 2.5rem; /* Margen */
+	position: relative; /* Posición */
+} 
+
+ /* Línea decorativa */
+
+.contacto-section .section-title::after {
+	content: ""; /* Elemento */
+	display: block; /* Bloque */
+	width: 60%; /* Ancho */
+	max-width: 520px; /* Máximo */
+	height: 2px; /* Alto */
+	margin: 1rem auto 0; /* Centrado */
+	background: linear-gradient(90deg, rgba(0, 212, 255, 0.9), rgba(0, 212, 255, 0.05)); /* Degradado */
+} 
+
+/* Tarjeta de contacto */
+
+.contacto-card { 
+	background: rgba(40, 52, 96, 0.9); /* Fondo */
+	border: 1px solid rgba(0, 212, 255, 0.18); /* Borde */
+	border-radius: 0.85rem; /* Bordes */
+	padding: 2rem 1.5rem; /* Espaciado */
+	text-align: center; /* Texto centrado */
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25); /* Sombra */
+	min-height: 230px; /* Altura mínima */
+} 
+
+/* Fila de tarjetas */
+
+.contacto-row { 
+	display: grid; /* Grid */
+	grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columnas */
+	gap: 1.5rem; /* Separación */
+} 
+
+/* Columnas internas */
+
+.contacto-row .contacto-col { 
+	min-width: 0; /* Evita overflow */
+} 
+
+/* Ajuste responsive */
+
+@media (max-width: 991px) { 
+	.contacto-row { /* Fila de tarjetas */
+		grid-template-columns: 1fr; /* 1 columna */
+	} 
+} 
+
+/* Título de tarjeta */
+
+.contacto-card h4 { 
+	margin-top: 1rem; /* Margen superior */
+	margin-bottom: 0.75rem; /* Margen inferior */
+	font-size: 1.4rem; /* Tamaño */
+	color: #f2f6ff; /* Color */
+	text-transform: capitalize; /* Capitaliza */
+} 
+
+/* Texto de tarjeta */
+
+.contacto-card p { 
+	margin: 0; /* Sin margen */
+	color: #d7def8; /* Color */
+	font-weight: 500; /* Grosor */
+} 
+
+/* Círculo del ícono */
+
+.icon-circle { 
+	width: 60px; /* Ancho */
+	height: 60px; /* Alto */
+	border-radius: 50%; /* Circular */
+	display: grid; /* Grid */
+	place-items: center; /* Centra */
+	margin: 0 auto; /* Centra */
+	background: #2c3b6b; /* Fondo */
+	border: 2px solid #00d4ff; /* Borde */
+	color: #00d4ff; /* Color */
+	font-size: 1.5rem; /* Tamaño */
+	box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.25); /* Sombra */
+} 
+
+/* Contenedor redes */
+
+.redes-sociales { 
+	margin-top: 3.5rem; /* Margen superior */
+	text-align: center; /* Centrado */
+} 
+
+ /* Título redes */
+
+.redes-sociales h3 {
+	font-family: "Germania One", system-ui; /* Fuente */
+	font-size: 1.8rem; /* Tamaño */
+	color: #f2f6ff; /* Color */
+	margin-bottom: 1.5rem; /* Margen */
+} 
+
+/* Contenedor iconos */
+
+.social-icons { 
+	display: flex; /* Flex */
+	justify-content: center; /* Centra */
+	gap: 1rem; /* Separación */
+	flex-wrap: wrap; /* Ajuste */
+} 
+
+/* Ícono social */
+
+.social-icon { 
+	width: 42px; /* Ancho */
+	height: 42px; /* Alto */
+	border-radius: 50%; /* Circular */
+	display: grid; /* Grid */
+	place-items: center; /* Centra */
+	background: rgba(35, 45, 86, 0.95); /* Fondo */
+	border: 1px solid rgba(0, 212, 255, 0.35); /* Borde */
+	color: #f2f6ff; /* Color */
+	text-decoration: none; /* Sin subrayado */
+	transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease; /* Transiciones */
+} 
+
+/* Hover iconos */
+
+.social-icon:hover { 
+	background: #00d4ff; /* Fondo */
+	color: #0a0a0a; /* Color */
+	transform: translateY(-2px); /* Movimiento */
+}
+
+/* ========================================================================== */
+/*                           SECCIÓN: CARRITO                                 */
+/* ========================================================================== */
+
+/* Carrito como panel lateral */
+
+/* Botón del carrito */
+
+.cart-toggle { 
+	position: relative; /* Para el contador */
+	width: 48px; /* Ancho */
+	height: 48px; /* Alto */
+	border: 1px solid rgba(0, 212, 255, 0.45); /* Borde */
+	background: rgba(10, 12, 28, 0.7); /* Fondo */
+	color: #00d4ff; /* Color */
+	font-size: 1.4rem; /* Tamaño */
+	border-radius: 0.4rem; /* Bordes */
+	display: flex; /* Centra */
+	align-items: center; /* Centra */
+	justify-content: center; /* Centra */
+	box-shadow: inset 0 0 0 1px rgba(0, 212, 255, 0.15); /* Sombra */
+	transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease; /* Transición */
+	margin-left: 1.5rem; /* Separación */
+} 
+
+/* Hover botón */
+
+.cart-toggle:hover { 
+	border-color: #00d4ff; /* Borde */
+	background: rgba(10, 12, 28, 0.9); /* Fondo */
+	transform: translateY(-1px); /* Movimiento */
+} 
+
+/* Burbuja contador */
+
+.cart-toggle-count { 
+	position: absolute; /* Posición */
+	top: -6px; /* Arriba */
+	right: -6px; /* Derecha */
+	width: 16px; /* Ancho */
+	height: 16px; /* Alto */
+	border-radius: 50%; /* Circular */
+	background: #00d4ff; /* Fondo */
+	color: #0a0a0a; /* Color texto */
+	font-size: 0.7rem; /* Tamaño */
+	text-align: center; /* Centrado */
+	line-height: 16px; /* Centrado vertical */
+}
+
+/* Fondo oscuro */
+
+.cart-overlay { 
+	position: fixed; /* Fijo */
+	inset: 0; /* Cubre todo */
+	background: rgba(0, 0, 0, 0.5); /* Oscuro */
+	opacity: 0; /* Oculto */
+	visibility: hidden; /* Oculto */
+	transition: opacity 0.2s ease; /* Transición */
+	z-index: 999; /* Encima */
+}
+
+/* Panel lateral */
+
+.cart-panel { 
+	position: fixed; /* Fijo */
+	top: 0; /* Arriba */
+	right: 0; /* Derecha */
+	width: min(420px, 90vw); /* Ancho */
+	height: 100vh; /* Alto */
+	transform: translateX(100%); /* Oculto */
+	transition: transform 0.25s ease; /* Transición */
+	z-index: 1000; /* Encima */
+} 
+
+/* Estado abierto */
+
+.cart-open { 
+	overflow: hidden; /* Bloquea scroll */
+} 
+
+/* Muestra panel */
+
+.cart-open .cart-panel { 
+	transform: translateX(0); /* Visible */
+} 
+
+/* Muestra overlay */
+
+.cart-open .cart-overlay { 
+	opacity: 1; /* Visible */
+	visibility: visible; /* Visible */
+} 
+
+/* Caja principal */
+
+.cart-container { 
+	font-family: "DM Serif Text", serif;
+	font-size: 1rem; /* Tamaño */
+	max-width: 1100px; /* Ancho máximo */
+	margin: 0 auto; /* Centrado */
+	background: rgba(26, 26, 46, 0.7); /* Fondo */
+	border-radius: 1.25rem; /* Bordes */
+	padding: 2rem; /* Espaciado */
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); /* Sombra */
+} 
+
+/* Ajuste interno */
+
+.cart-panel .cart-container { 
+	max-width: 100%; /* Ocupa todo */
+	height: 100%; /* Alto completo */
+	overflow-y: auto; /* Scroll */
+	border-radius: 0; /* Sin bordes */
+} 
+
+/* Encabezado */
+
+.cart-header { 
+	display: flex; /* Flex */
+	justify-content: space-between; /* Separación */
+	align-items: center; /* Centrado */
+	margin-bottom: 1.5rem; /* Margen */
+} 
+
+/* Título */
+
+.cart-title { 
+	font-family: "Germania One", system-ui; /* Fuente */
+	font-size: 2.5rem; /* Tamaño */
+	color: #00d4ff; /* Color */
+} 
+
+/* Botón cerrar */
+
+.cart-close { 
+	border: none; /* Sin borde */
+	background: transparent; /* Fondo */
+	color: #f2f6ff; /* Color */
+	font-size: 1.2rem; /* Tamaño */
+} 
+
+/* Contador */
+
+.cart-count { 
+	color: #c7d2ff; /* Color */
+	font-size: 1.1rem; /* Tamaño */
+} 
+
+/* Último producto agregado */
+
+.cart-last {
+	margin-bottom: 0.75rem; /* Separación inferior */
+	color: #a9b7ff; /* Color */
+	font-size: 0.95rem; /* Tamaño */
+} 
+
+/* Mensaje vacío */
+
+.cart-empty { 
+	padding: 1rem; /* Espaciado */
+	text-align: center; /* Centrado */
+	color: #a9b7ff; /* Color */
+} 
+
+/* Lista */
+
+.cart-list { 
+	display: grid; /* Grid */
+	gap: 1rem; /* Separación */
+} 
+
+/* Item del carrito */
+
+.cart-item { 
+	display: grid; /* Grid */
+	grid-template-columns: 1fr auto; /* Dos columnas */
+	gap: 1rem; /* Separación */
+	align-items: center; /* Centrado */
+	background: rgba(38, 48, 86, 0.9); /* Fondo */
+	border-radius: 0.75rem; /* Bordes */
+	padding: 1rem; /* Espaciado */
+	border: 1px solid rgba(0, 212, 255, 0.18); /* Borde */
+} 
+
+/* Info */
+
+.cart-item-info { 
+	display: flex; /* Flex */
+	gap: 1rem; /* Separación */
+	align-items: center; /* Centrado */
+} 
+
+/* Imagen */
+
+.cart-item-img { 
+	width: 72px; /* Ancho */
+	height: 72px; /* Alto */
+	object-fit: cover; /* Ajuste */
+	border-radius: 0.5rem; /* Bordes */
+} 
+
+/* Nombre */
+
+.cart-item-name { 
+	margin: 0; /* Sin margen */
+	color: #f2f6ff; /* Color */
+	font-weight: 600; /* Grosor */
+} 
+
+/* Precio */
+
+.cart-item-price { 
+	margin: 0.2rem 0 0; /* Margen */
+	color: #a9b7ff; /* Color */
+} 
+
+/* Acciones */
+
+.cart-item-actions { 
+	display: flex; /* Flex */
+	align-items: center; /* Centrado */
+	gap: 0.75rem; /* Separación */
+	flex-wrap: wrap; /* Ajuste */
+}
+
+/* Acciones */
+
+.cart-qty { 
+	width: 32px; /* Ancho */
+	height: 32px; /* Alto */
+	border-radius: 50%; /* Circular */
+	border: 1px solid #00d4ff; /* Borde */
+	background: transparent; /* Fondo */
+	color: #00d4ff; /* Color */
+} 
+
+/* Número de cantidad */
+
+.cart-qty-value { 
+	min-width: 24px; /* Ancho */
+	text-align: center; /* Centrado */
+} 
+
+/* Subtotal */
+
+.cart-item-subtotal { 
+	color: #f2f6ff; /* Color */
+	font-weight: 600; /* Grosor */
+} 
+
+/* Botón eliminar */
+
+.cart-remove { 
+	border: none; /* Sin borde */
+	background: #2b3a6b; /* Fondo */
+	color: #f2f6ff; /* Color */
+	padding: 0.4rem 0.8rem; /* Espaciado */
+	border-radius: 0.5rem; /* Bordes */
+} 
+
+/* Resumen */
+
+.cart-summary { 
+	margin-top: 1.5rem; /* Margen */
+	display: flex; /* Flex */
+	justify-content: space-between; /* Separación */
+	align-items: center; /* Centrado */
+	flex-wrap: wrap; /* Ajuste */
+	gap: 1rem; /* Separación */
+} 
+
+/* Total */
+
+.cart-total { 
+	font-size: 1.25rem; /* Tamaño */
+	color: #f2f6ff; /* Color */
+} 
+
+/* Acciones */
+
+.cart-actions { 
+	display: flex; /* Flex */
+	gap: 0.75rem; /* Separación */
+} 
+
+/* Botones del carrito */
+
+.cart-button { 
+	border: 1px solid #00d4ff; /* Borde */
+	background: transparent; /* Fondo */
+	color: #00d4ff; /* Color */
+	padding: 0.6rem 1.4rem; /* Espaciado */
+	border-radius: 999px; /* Bordes */
+	font-weight: 600; /* Grosor */
+} 
+
+/* Hover */
+
+.cart-button:hover { 
+	background: #00d4ff; /* Fondo */
+	color: #0a0a0a; /* Color */
+} 
+
+/* Responsive carrito */
+
+@media (max-width: 768px) { 
+	.cart-item { /* Item */
+		grid-template-columns: 1fr; /* Una columna */
+	} 
+
+	.cart-summary { /* Resumen */
+		justify-content: center; /* Centrado */
+	} 
+} 
+
+/* ========================================================================== */
+/*                           SECCIÓN: FOOTER                                  */
+/* ========================================================================== */
+
+/* Footer */
+
+.footer { 
+	font-family: "Germania One", system-ui;
+	font-size: 2rem; /* Fuente y tamaño */
+	background: rgba(10, 12, 28, 0.95); /* Fondo oscuro */
+	padding: 2rem 1.5rem; /* Espaciado */
+	border-top: 1px solid rgba(0, 212, 255, 0.2); /* Borde superior */
+	text-align: center; /* Centrado */
+} 
+
+/* Texto del footer */
+
+.footer p { 
+	margin: 0; /* Sin margen */
+	color: #c7d2ff; /* Color */
+	font-weight: 600; /* Grosor */
+	letter-spacing: 0.03rem; /* Espaciado */
+} 

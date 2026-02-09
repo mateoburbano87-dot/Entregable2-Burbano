@@ -1,0 +1,122 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+@use "../utilities/extend";
+
+// Cards de productos (featured)
+.featured-card { /* Tarjeta de producto */
+	@include mixins.card-base(variables.$color-bg-card, variables.$border-radius-lg, variables.$shadow-md); /* Base de tarjeta */
+	overflow: hidden; /* Oculta desbordes */
+	@include mixins.transition(transform 0.3s ease, box-shadow 0.3s ease); /* Transición */
+
+	&:hover { /* Hover de tarjeta */
+		transform: translateY(-6px); /* Eleva la tarjeta */
+		box-shadow: variables.$shadow-lg; /* Aumenta la sombra */
+	}
+}
+
+.featured-card-uppercase { /* Texto en mayúsculas dentro de la card */
+	@extend %uppercase; /* Convierte todo el texto */
+}
+
+.featured-card-sm .featured-image { /* Imagen pequeña por card */
+	height: 160px; /* Alto de imagen */
+}
+
+.featured-card-lg .featured-image { /* Imagen grande */
+	height: 350px; /* Alto de imagen */
+}
+
+.featured-card-lg .featured-body { /* Cuerpo grande */
+	padding: 2rem; /* Padding extra */
+}
+
+.featured-card-lg .featured-name { /* Nombre grande */
+	font-size: variables.$font-size-card-name-lg; /* Tamaño del nombre */
+}
+
+.featured-card-lg .featured-desc { /* Descripción grande */
+	font-size: variables.$font-size-card-desc-lg; /* Tamaño de la descripción */
+}
+
+.featured-image { /* Imagen del producto */
+	width: 100%; /* Ancho completo */
+	height: 200px; /* Alto de imagen */
+	object-fit: cover; /* Ajusta imagen */
+	background: variables.$gradient-image; /* Fondo de respaldo */
+}
+
+.featured-image-sm { /* Tamaño pequeño directo en la imagen */
+	height: 160px; /* Alto de imagen */
+}
+
+.featured-image-lg { /* Tamaño grande directo en la imagen */
+	height: 260px; /* Alto de imagen */
+}
+
+.featured-body { /* Cuerpo de la tarjeta */
+	padding: 1.5rem; /* Padding interno */
+	text-align: left; /* Texto alineado a la izquierda */
+}
+
+.featured-name { /* Nombre del producto */
+	font-size: variables.$font-size-card-name; /* Tamaño del nombre */
+	color: variables.$color-text-base; /* Color del nombre */
+	margin-bottom: 0.5rem; /* Margen inferior */
+}
+
+.featured-desc { /* Descripción del producto */
+	color: variables.$color-text-soft; /* Color de descripción */
+	margin-bottom: 1.25rem; /* Margen inferior */
+}
+
+.featured-button { /* Botón de la tarjeta */
+	background: transparent; /* Fondo transparente */
+	border: variables.$border-primary; /* Borde del botón */
+	color: variables.$color-primary; /* Color del texto */
+	padding: 0.6rem 1.4rem; /* Padding del botón */
+	border-radius: variables.$border-pill; /* Bordes redondos */
+	font-weight: 600; /* Grosor del texto */
+	@include mixins.transition(background-color 0.2s ease, color 0.2s ease, transform 0.2s ease); /* Transiciones */
+
+	&:hover { /* Hover del botón */
+		background-color: variables.$color-primary; /* Fondo al hover */
+		color: variables.$color-primary-contrast; /* Color del texto */
+		transform: translateY(-2px); /* Movimiento suave */
+	}
+}
+
+// Cards de contacto
+.contacto-card { /* Tarjeta de contacto */
+	@include mixins.card-base(variables.$color-bg-contact, variables.$border-radius-md, variables.$shadow-sm); /* Base de tarjeta */
+	border: variables.$border-primary-soft; /* Borde */
+	padding: 2rem 1.5rem; /* Espaciado */
+	@extend %text-center; /* Texto centrado */
+	min-height: 230px; /* Altura mínima */
+}
+
+.contacto-card h4 { /* Título de tarjeta */
+	margin-top: 1rem; /* Margen superior */
+	margin-bottom: 0.75rem; /* Margen inferior */
+	font-size: variables.$font-size-card-title; /* Tamaño */
+	color: variables.$color-text-light; /* Color */
+	text-transform: capitalize; /* Capitaliza */
+}
+
+.contacto-card p { /* Texto de tarjeta */
+	margin: 0; /* Sin margen */
+	color: variables.$color-text-secondary; /* Color */
+	font-weight: 500; /* Grosor */
+}
+
+.icon-circle { /* Círculo del ícono */
+	@include mixins.circle(60px); /* Tamaño y forma */
+	@extend %text-center; /* Centra */
+	display: grid; /* Grid */
+	place-items: center; /* Centra */
+	margin: 0 auto; /* Centra */
+	background: variables.$color-bg-contact-icon; /* Fondo */
+	border: 2px solid variables.$color-primary; /* Borde */
+	color: variables.$color-primary; /* Color */
+	font-size: 1.5rem; /* Tamaño */
+	box-shadow: variables.$shadow-sm; /* Sombra */
+}

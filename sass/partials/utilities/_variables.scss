@@ -1,0 +1,71 @@
+// Tipografías
+$font-base: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$font-title: "Nabla", system-ui;
+$font-display: "Germania One", system-ui;
+
+// Colores base (texto)
+$color-text-base: #e0e0e0;
+$color-text-muted: #c7d2ff;
+$color-text-soft: #a9b7ff;
+$color-text-light: #f2f6ff;
+$color-text-secondary: #d7def8;
+
+// Colores de marca
+$color-primary: #00d4ff;
+$color-primary-hover: #00aaff;
+$color-primary-contrast: #0a0a0a;
+
+// Colores de fondo (sólidos)
+$color-bg-dark-900: #0a0a0a;
+$color-bg-dark-800: #1a1a2e;
+$color-bg-dark-700: #16213e;
+$color-bg-dark-600: #0f3460;
+$color-bg-nav: rgba(26, 26, 46, 0.7);
+$color-bg-header: rgba(26, 26, 46, 0.6);
+$color-bg-card: rgba(26, 26, 46, 0.6);
+$color-bg-contact: rgba(40, 52, 96, 0.9);
+$color-bg-contact-icon: #2c3b6b;
+$color-bg-social: rgba(35, 45, 86, 0.95);
+$color-bg-brands: rgba(20, 30, 60, 0.95);
+$color-bg-brands-alt: rgba(15, 52, 96, 0.85);
+$color-bg-brand-item: rgba(38, 48, 86, 0.9);
+$color-bg-button: #2b3a6b;
+
+// Gradientes
+$gradient-body: linear-gradient(135deg, $color-bg-dark-900 0%, $color-bg-dark-800 25%, $color-bg-dark-700 50%, $color-bg-dark-600 75%, $color-bg-dark-800 100%);
+$gradient-image: linear-gradient(135deg, rgba(0, 212, 255, 0.35), rgba(15, 52, 96, 0.6));
+$gradient-contact: linear-gradient(180deg, #2a325b 0%, #2d3a6f 100%);
+$gradient-divider: linear-gradient(90deg, rgba(0, 212, 255, 0.9), rgba(0, 212, 255, 0.05));
+$gradient-brands: linear-gradient(135deg, $color-bg-brands, $color-bg-brands-alt);
+
+// Bordes
+$border-radius-sm: 0.75rem;
+$border-radius-md: 0.85rem;
+$border-radius-lg: 1.25rem;
+$border-pill: 999px;
+$border-primary-soft: 1px solid rgba(0, 212, 255, 0.18);
+$border-primary: 1px solid #00d4ff;
+
+// Sombras
+$shadow-xs: 0 0.25rem 0.5rem rgba(0, 212, 255, 0.3);
+$shadow-sm: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.25);
+$shadow-md: 0 1rem 2rem rgba(0, 0, 0, 0.35);
+$shadow-lg: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.4);
+
+// Tamaños de fuente
+$font-size-brand: 3rem;
+$font-size-title: 4rem;
+$font-size-section: 3rem;
+$font-size-subtitle: 1.8rem;
+$font-size-card-title: 1.4rem;
+$font-size-card-name: 1.5rem;
+$font-size-card-name-lg: 1.75rem;
+$font-size-card-desc-lg: 1.1rem;
+$font-size-nav: 2.5rem;
+
+// Espaciados
+$spacing-section-y: 4rem;
+$spacing-section-x: 1.5rem;
+$spacing-gap-lg: 2rem;
+$spacing-gap-md: 1.5rem;
+

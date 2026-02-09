@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitores, la mejor calidad visual para tus juegos y trabajo.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/styles.css">
+</head>
+
+<body>
+
+    <header> <!-- Encabezado principal -->
+        <div class="header_container">
+
+            <img class="Logo logo-size" src="../../images/logos/Logo-Toman_Tech-Photoroom.png" alt="Toman_Tech Logo">
+            <!-- Logo -->
+            <h1 class="titulo_web">Toman_Tech</h1> <!-- Título principal -->
+
+        </div>
+
+        <nav class="navbar navbar-expand-lg  custom-navbar hover-text-only submenu-horizontal submenu-centered">
+            <!-- Navegación principal -->
+            <div class="container-fluid nav-container-centered">
+                <a class="navbar-brand">Toman_Tech</a> <!-- Marca -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../portatiles.html">Portátiles</a></li>
+                                <li><a class="dropdown-item" href="../pc_ensamblados.html">PC Ensamblados</a></li>
+                                <li><a class="dropdown-item" href="../sillas.html">Sillas</a></li>
+                                <li><a class="dropdown-item" href="../streaming.html">Streaming</a></li>
+                                <li class="dropdown-submenu dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Componentes</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="submenu-back-item">
+                                            <button class="dropdown-item submenu-back" type="button">← Volver</button>
+                                        </li>
+                                        <li><a class="dropdown-item"
+                                                href="../componentes/procesadores.html">Procesadores</a></li>
+                                        <li><a class="dropdown-item" href="../componentes/placa_madre.html">Placa
+                                                madre</a></li>
+                                        <li><a class="dropdown-item" href="../componentes/ram.html">RAM</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="../componentes/tarjeta_grafica.html">Tarjeta gráfica</a>
+                                        </li>
+                                        <li><a class="dropdown-item"
+                                                href="../componentes/fuente_poder.html">Fuente
+                                                poder</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="../componentes/refrigeracion.html">Refrigeración</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="../componentes/almacenamiento.html">Almacenamiento</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="../componentes/chasis.html">Chasis</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Perifericos</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="submenu-back-item">
+                                            <button class="dropdown-item submenu-back" type="button">← Volver</button>
+                                        </li>
+                                        <li><a class="dropdown-item"
+                                                href="../perifericos/diademas.html">Diademas</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="../perifericos/teclados.html">Teclados</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="#">Monitores</a></li>
+                                        <li><a class="dropdown-item" href="../perifericos/mouse.html">Mouse</a>
+                                        </li>
+                                        <li><a class="dropdown-item"
+                                                href="../perifericos/mousepad.html">Mousepads</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+
+                    </ul>
+                    <button class="cart-toggle" id="cartToggle" type="button" aria-label="Abrir carrito">
+                        <!-- Botón carrito -->
+                        <i class="bi bi-cart3"></i>
+                        <span class="cart-toggle-count" id="cartToggleCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="featured-section">
+            <div class="featured-container">
+                <h2 class="featured-title">Monitores</h2>
+                <p class="featured-subtitle">La mejor calidad visual para tus juegos y trabajo.</p>
+                <div class="featured-grid featured-grid-3" data-products-category="perifericos" data-products-subcategory="Monitores"></div>
+
+                <template id="category-card-template">
+                    <article class="featured-card featured-card-lg featured-card-uppercase">
+                        <img class="featured-image featured-image-contain" alt="">
+                        <div class="featured-body">
+                            <h3 class="featured-name"></h3>
+                            <p class="featured-desc"></p>
+                            <p class="featured-price"></p>
+                            <button class="featured-button add-to-cart" type="button">Agregar al carrito</button>
+                        </div>
+                    </article>
+                </template>
+            </div>
+        </section>
+    </main>
+
+    <div class="cart-overlay" id="cartOverlay"></div> <!-- Fondo oscuro del carrito -->
+        <aside class="cart-panel" id="cartPanel" aria-hidden="true"> <!-- Panel del carrito -->
+            <div class="cart-container">
+                <div class="cart-header">
+                    <h2 class="cart-title">Carrito de compras</h2>
+                    <button class="cart-close" id="cartClose" type="button" aria-label="Cerrar carrito">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+
+                <div class="cart-last" id="cartLastAdded" aria-live="polite"></div> <!-- Último agregado -->
+
+                <span class="cart-count">Productos: <strong id="cartCount">0</strong></span>
+
+                <div class="cart-empty" id="cartEmpty">Tu carrito está vacío.</div> <!-- Mensaje vacío -->
+
+                <div class="cart-list" id="cartList"></div>
+
+                <template id="cart-item-template"> <!-- Template de item del carrito -->
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <img class="cart-item-img" alt="">
+                            <div>
+                                <p class="cart-item-name"></p>
+                                <p class="cart-item-price"></p>
+                            </div>
+                        </div>
+                        <div class="cart-item-actions">
+                            <button class="cart-qty" data-action="decrease" type="button">-</button>
+                            <span class="cart-qty-value"></span>
+                            <button class="cart-qty" data-action="increase" type="button">+</button>
+                            <span class="cart-item-subtotal"></span>
+                            <button class="cart-remove" data-action="remove" type="button">Eliminar</button>
+                        </div>
+                    </div>
+                </template>
+
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        Total: <strong id="cartTotal">$0</strong>
+                    </div>
+                    <div class="cart-actions">
+                        <button class="cart-button cart-clear" id="cartClear" type="button">Vaciar carrito</button>
+                        <button class="cart-button cart-checkout" type="button">Finalizar compra</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    <!-- Sección de Contacto y Redes Sociales -->
+    <section class="contacto-section"> <!-- Sección de contacto -->
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Contáctanos</h2>
+            <div class="contacto-row">
+                <!-- Información de Contacto -->
+                <div class="contacto-col mb-4">
+                    <div class="contacto-card">
+                        <div class="icon-circle">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h4>Ubicación</h4>
+                        <p>Calle 12 # 25-54<br>Pasto, Colombia<br>520001</p>
+                    </div>
+                </div>
+
+                <div class="contacto-col mb-4">
+                    <div class="contacto-card">
+                        <div class="icon-circle">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <h4>Teléfono</h4>
+                        <p>+57 318 8515294<br>Lun - Vie: 7:00 am - 7:00 pm</p>
+                    </div>
+                </div>
+
+                <div class="contacto-col mb-4">
+                    <div class="contacto-card">
+                        <div class="icon-circle">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <p>info@tomantech.com<br>ventas@tomantech.com<br>soporte@tomantech.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div class="redes-sociales mt-5">
+                <h3 class="text-center mb-4">Síguenos en Redes Sociales</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram" title="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon twitter" title="Twitter">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="#" class="social-icon whatsapp" title="WhatsApp">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"> <!-- Pie de página -->
+        <div class="container">
+            <p>&copy; 2026 Toman_Tech. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="../../JS/data/productos.js" defer></script>`n    <script src="../../JS/data/productosInit.js" defer></script> <!-- Carga productos -->
+    <script src="../../JS/renderFeatured.js" defer></script> <!-- Render destacados -->
+    <script src="../../JS/renderRecent.js" defer></script> <!-- Render recientes -->
+    <script src="../../JS/renderCategory.js" defer></script> <!-- Render por categoría -->
+    <script src="../../JS/shippingForm.js" defer></script> <!-- Lógica del formulario -->
+    <script src="../../JS/cart.js" defer></script> <!-- Lógica del carrito -->
+    <script src="../../JS/carrousel.js" defer></script> <!-- Carrusel de marcas -->
+    <script src="../../JS/navSubmenu.js" defer></script> <!-- Control de submenús -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

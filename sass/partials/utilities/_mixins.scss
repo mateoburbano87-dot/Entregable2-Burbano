@@ -1,0 +1,111 @@
+@use "variables";
+
+// Mixins reutilizables
+@mixin flex-center($direction: row, $gap: null, $justify: center, $align: center) { // Flex con centrado configurable
+	display: flex;
+	flex-direction: $direction;
+
+	@if $justify != null {
+		justify-content: $justify;
+	}
+
+	@if $align != null {
+		align-items: $align;
+	}
+
+	@if $gap != null {
+		gap: $gap;
+	}
+}
+
+@mixin transition($value) { // Atajo para transition
+	transition: $value;
+}
+
+@mixin text-style($size: null, $weight: null, $line-height: null, $letter-spacing: null, $transform: null) { // Atajo de tipografía
+	@if $size != null {
+		font-size: $size;
+	}
+	@if $weight != null {
+		font-weight: $weight;
+	}
+	@if $line-height != null {
+		line-height: $line-height;
+	}
+	@if $letter-spacing != null {
+		letter-spacing: $letter-spacing;
+	}
+	@if $transform != null {
+		text-transform: $transform;
+	}
+}
+
+@mixin backdrop-blur($value) { // Aplica blur al fondo
+	backdrop-filter: blur($value);
+}
+
+@mixin card-base($bg, $radius: variables.$border-radius-lg, $shadow: variables.$shadow-md) { // Base para tarjetas
+	background: $bg;
+	border-radius: $radius;
+	box-shadow: $shadow;
+}
+
+@mixin grid-cols($cols, $gap: variables.$spacing-gap-md) { // Grid con columnas fijas
+	display: grid;
+	grid-template-columns: repeat($cols, minmax(0, 1fr));
+	gap: $gap;
+}
+
+@mixin responsive-max($width) { // Media query max-width
+	@media (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin responsive-min($width) { // Media query min-width
+	@media (min-width: $width) {
+		@content;
+	}
+}
+
+@mixin size($width, $height: $width) { // Define ancho y alto
+	width: $width;
+	height: $height;
+}
+
+@mixin circle($size) { // Crea un círculo perfecto
+	@include size($size);
+	border-radius: 50%;
+}
+
+@mixin absolute-center($axis: both) { // Centra con position absolute
+	position: absolute;
+	@if $axis == both {
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	} @else if $axis == x {
+		left: 50%;
+		transform: translateX(-50%);
+	} @else if $axis == y {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+@mixin clamp-font($min, $preferred, $max) { // Tamaño de fuente fluido
+	font-size: clamp($min, $preferred, $max);
+}
+
+@mixin truncate($lines: 1) { // Trunca texto con ellipsis
+	@if $lines == 1 {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	} @else {
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: $lines;
+		-webkit-box-orient: vertical;
+	}
+}

@@ -1,0 +1,37 @@
+@use "variables";
+
+// Extends (placeholders reutilizables)
+%uppercase { // Convierte el texto a mayúsculas
+	text-transform: uppercase;
+}
+
+%text-center { // Centra el texto
+	text-align: center;
+}
+
+%text-shadow-primary { // Sombra de texto con color principal
+	text-shadow: variables.$shadow-xs;
+}
+
+%no-list { // Quita estilos de lista
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+%link-reset { // Enlace sin subrayado
+	text-decoration: none;
+	color: inherit;
+}
+
+%shadow-card { // Sombra estándar de tarjeta
+	box-shadow: variables.$shadow-md;
+}
+
+%shadow-hover { // Sombra hover
+	box-shadow: variables.$shadow-lg;
+}
+
+%rounded-lg { // Bordes redondeados grandes
+	border-radius: variables.$border-radius-lg;
+}

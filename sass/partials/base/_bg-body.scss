@@ -1,0 +1,14 @@
+//Archivo de estilos para el fondo y el cuerpo del documento
+
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+body { /* Estilos generales del body */
+	background: variables.$gradient-body; /* Fondo degradado */
+	background-attachment: fixed; /* Fija el fondo */
+	color: variables.$color-text-base; /* Color base del texto */
+	font-family: variables.$font-base; /* Fuente principal */
+	@include mixins.text-style(null, null, 1.6); /* Altura de línea */
+	min-height: 100vh; /* Altura mínima de pantalla */
+}
+

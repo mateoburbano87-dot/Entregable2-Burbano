@@ -1,0 +1,226 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+@use "../utilities/extend";
+
+// Sección del carrito
+.cart-section { /* Contenedor del carrito */
+	padding: 3rem variables.$spacing-section-x 5rem; /* Espaciado */
+}
+
+.cart-container { /* Caja principal */
+	max-width: 1100px; /* Ancho máximo */
+	margin: 0 auto; /* Centrado */
+	@include mixins.card-base(rgba(26, 26, 46, 0.7), variables.$border-radius-lg, variables.$shadow-md); /* Base */
+	padding: 2rem; /* Espaciado */
+}
+
+// Botón del carrito en el navbar
+.cart-toggle { /* Botón flotante en el nav */
+	position: relative; /* Para el contador */
+	@include mixins.size(48px); /* Botón cuadrado */
+	border: 1px solid rgba(0, 212, 255, 0.45); /* Borde */
+	background: rgba(10, 12, 28, 0.7); /* Fondo */
+	color: variables.$color-primary; /* Color */
+	font-size: 1.4rem; /* Tamaño */
+	border-radius: 0.4rem; /* Bordes */
+	@include mixins.flex-center(); /* Centra el ícono */
+	box-shadow: inset 0 0 0 1px rgba(0, 212, 255, 0.15); /* Sombra interna */
+	@include mixins.transition(border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease); /* Transición */
+	margin-left: 1.5rem; /* Separación */
+
+	&:hover { /* Hover */
+		border-color: variables.$color-primary; /* Borde */
+		background: rgba(10, 12, 28, 0.9); /* Fondo */
+		transform: translateY(-1px); /* Movimiento */
+	}
+}
+
+.cart-toggle-count { /* Burbuja contador */
+	position: absolute; /* Posición */
+	top: -6px; /* Arriba */
+	right: -6px; /* Derecha */
+	@include mixins.circle(16px); /* Tamaño */
+	background: variables.$color-primary; /* Fondo */
+	color: variables.$color-primary-contrast; /* Color texto */
+	font-size: 0.7rem; /* Tamaño */
+	@extend %text-center; /* Centrado */
+	line-height: 16px; /* Centrado vertical */
+}
+
+// Panel tipo drawer
+.cart-overlay { /* Fondo oscuro */
+	position: fixed; /* Fijo */
+	inset: 0; /* Cubre todo */
+	background: rgba(0, 0, 0, 0.5); /* Oscuro */
+	opacity: 0; /* Oculto */
+	visibility: hidden; /* Oculto */
+	@include mixins.transition(opacity 0.2s ease); /* Transición */
+	z-index: 999; /* Encima */
+}
+
+.cart-panel { /* Panel lateral */
+	position: fixed; /* Fijo */
+	top: 0; /* Arriba */
+	right: 0; /* Derecha */
+	width: min(420px, 90vw); /* Ancho */
+	height: 100vh; /* Alto */
+	transform: translateX(100%); /* Oculto */
+	@include mixins.transition(transform 0.25s ease); /* Transición */
+	z-index: 1000; /* Encima del overlay */
+}
+
+.cart-panel .cart-container { /* Ajuste interno */
+	max-width: 100%; /* Ocupa todo */
+	height: 100%; /* Alto completo */
+	overflow-y: auto; /* Scroll */
+	border-radius: 0; /* Sin bordes */
+}
+
+.cart-close { /* Botón cerrar */
+	border: none; /* Sin borde */
+	background: transparent; /* Fondo */
+	color: variables.$color-text-light; /* Color */
+	font-size: 1.2rem; /* Tamaño */
+}
+
+.cart-open { /* Estado abierto */
+	overflow: hidden; /* Bloquea scroll */
+}
+
+.cart-open .cart-panel { /* Muestra panel */
+	transform: translateX(0); /* Visible */
+}
+
+.cart-open .cart-overlay { /* Muestra overlay */
+	opacity: 1; /* Visible */
+	visibility: visible; /* Visible */
+}
+
+.cart-header { /* Encabezado */
+	@include mixins.flex-center(row, 1rem, space-between, center); /* Flex */
+	margin-bottom: 1.5rem; /* Margen */
+}
+
+.cart-title { /* Título */
+	font-family: variables.$font-display; /* Fuente */
+	font-size: 2.5rem; /* Tamaño */
+	color: variables.$color-primary; /* Color */
+}
+
+.cart-count { /* Contador */
+	color: variables.$color-text-muted; /* Color */
+	font-size: 1.1rem; /* Tamaño */
+}
+
+.cart-empty { /* Mensaje vacío */
+	padding: 1rem; /* Espaciado */
+	@extend %text-center; /* Centrado */
+	color: variables.$color-text-soft; /* Color */
+}
+
+.cart-list { /* Lista */
+	display: grid; /* Grid */
+	gap: 1rem; /* Separación */
+}
+
+.cart-item { /* Item del carrito */
+	display: grid; /* Grid */
+	grid-template-columns: 1fr auto; /* Dos columnas */
+	gap: 1rem; /* Separación */
+	align-items: center; /* Centrado */
+	background: variables.$color-bg-brand-item; /* Fondo */
+	border-radius: variables.$border-radius-sm; /* Bordes */
+	padding: 1rem; /* Espaciado */
+	border: variables.$border-primary-soft; /* Borde */
+}
+
+.cart-item-info { /* Info */
+	@include mixins.flex-center(row, 1rem, null, center); /* Flex */
+}
+
+.cart-item-img { /* Imagen */
+	@include mixins.size(72px); /* Tamaño */
+	object-fit: cover; /* Ajuste */
+	border-radius: 0.5rem; /* Bordes */
+}
+
+.cart-item-name { /* Nombre */
+	margin: 0; /* Sin margen */
+	color: variables.$color-text-light; /* Color */
+	font-weight: 600; /* Grosor */
+}
+
+.cart-item-price { /* Precio */
+	margin: 0.2rem 0 0; /* Margen */
+	color: variables.$color-text-soft; /* Color */
+}
+
+.cart-item-actions { /* Acciones */
+	@include mixins.flex-center(row, 0.75rem, null, center); /* Flex */
+	flex-wrap: wrap; /* Ajuste */
+}
+
+.cart-qty { /* Botones de cantidad */
+	@include mixins.circle(32px); /* Tamaño */
+	border: variables.$border-primary; /* Borde */
+	background: transparent; /* Fondo */
+	color: variables.$color-primary; /* Color */
+}
+
+.cart-qty-value { /* Número de cantidad */
+	min-width: 24px; /* Ancho */
+	@extend %text-center; /* Centrado */
+}
+
+.cart-item-subtotal { /* Subtotal */
+	color: variables.$color-text-light; /* Color */
+	font-weight: 600; /* Grosor */
+}
+
+.cart-remove { /* Botón eliminar */
+	border: none; /* Sin borde */
+	background: variables.$color-bg-button; /* Fondo */
+	color: variables.$color-text-light; /* Color */
+	padding: 0.4rem 0.8rem; /* Espaciado */
+	border-radius: 0.5rem; /* Bordes */
+}
+
+.cart-summary { /* Resumen */
+	margin-top: 1.5rem; /* Margen */
+	@include mixins.flex-center(row, 1rem, space-between, center); /* Flex */
+	flex-wrap: wrap; /* Ajuste */
+}
+
+.cart-total { /* Total */
+	font-size: 1.25rem; /* Tamaño */
+	color: variables.$color-text-light; /* Color */
+}
+
+.cart-actions { /* Acciones */
+	@include mixins.flex-center(row, 0.75rem, null, center); /* Flex */
+}
+
+.cart-button { /* Botones del carrito */
+	border: variables.$border-primary; /* Borde */
+	background: transparent; /* Fondo */
+	color: variables.$color-primary; /* Color */
+	padding: 0.6rem 1.4rem; /* Espaciado */
+	border-radius: variables.$border-pill; /* Bordes */
+	font-weight: 600; /* Grosor */
+	@include mixins.transition(background-color 0.2s ease, color 0.2s ease); /* Transición */
+
+	&:hover { /* Hover */
+		background: variables.$color-primary; /* Fondo */
+		color: variables.$color-primary-contrast; /* Color */
+	}
+}
+
+@include mixins.responsive-max(768px) {
+	.cart-item { /* Item */
+		grid-template-columns: 1fr; /* Una columna */
+	}
+
+	.cart-summary { /* Resumen */
+		justify-content: center; /* Centrado */
+	}
+}
