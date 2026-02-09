@@ -34,10 +34,14 @@ if (track && prev && next) {
 		track.scrollTo({ left: index * itemRealWidth, behavior: "smooth" });
 	}
 
+	// Botones de navegación
+
 	next.addEventListener("click", () => {
 		index += step;
 		updateCarousel();
 	});
+
+	// El botón "prev" solo retrocede si no estamos al inicio
 
 	prev.addEventListener("click", () => {
 		index -= step;
