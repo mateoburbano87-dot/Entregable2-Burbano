@@ -218,7 +218,7 @@ const componentes = [
       id: 22,
       nombre: "ASUS ROG Hyperion GR701 Edición EVA-02",
       categoria: "Componentes",
-      subcategoria: "Gabinetes",
+      subcategoria: "Chasis",
       precio: 350,
       descripcion: "Gabinete con ventiladores RGB",
       imagen: "images/productos/componentes/chasis/ASUS ROG Hyperion GR701 Edición EVA-02.png",

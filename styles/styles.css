@@ -1,5 +1,3 @@
-/* Hoja de estilos principal: layout, tarjetas, formulario, carrito y footer */
-
 /* ========================================================================== */
 /*                           SECCIÓN: GENERAL                                 */
 /* ========================================================================== */
@@ -15,10 +13,8 @@
 /* Estilos generales del body */
 
 body { 
-	background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #1a1a2e 100%); /* Fondo degradado */
+	background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #1a1a2e 100%); 
 	background-attachment: fixed; /* Fija el fondo */
-	color: #e0e0e0; /* Color base del texto */
-	font-family: '' Segoe UI'', Tahoma, Geneva, Verdana, sans-serif; /* Fuente principal */
 	line-height: 1.6; /* Altura de línea */
 	min-height: 100vh; /* Altura mínima de pantalla */
 } 
@@ -343,13 +339,13 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 /* Nombre grande */
 
 .featured-card-lg .featured-name { 
-	font-size: 1.75rem; /* Tamaño del nombre */
+	font-size: 2rem; /* Tamaño del nombre */
 } 
 
 /* Descripción grande */
 
 .featured-card-lg .featured-desc { 
-	font-size: 1.1rem; /* Tamaño de la descripción */
+	font-size: 1.5rem; /* Tamaño de la descripción */
 } 
 
 /* Hover de tarjeta */
@@ -424,7 +420,8 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
  /* Nombre del producto */
 
 .featured-name {
-	font-size: 1.5rem; /* Tamaño del nombre */
+	font-family: "VT323", monospace;
+	font-size: 2rem; /* Tamaño del nombre */
 	color: #e0e0e0; /* Color del nombre */
 	margin-bottom: 0.5rem; /* Margen inferior */
 } 
@@ -432,6 +429,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 /* Descripción del producto */
 
 .featured-desc { 
+	font-family: "Limelight", sans-serif;
 	color: #a9b7ff; /* Color de descripción */
 	margin-bottom: 1.25rem; /* Margen inferior */
 } 
