@@ -35,7 +35,7 @@
     ];
 
     // 4) Filtrar destacados y recientes
-    const destacadosIds = [1, 5, 8, 12, 14, 15, 17]; 
+    const destacadosIds = [1, 5, 8, 12, 14, 15, 17, 22, 23, 21]; // IDs de productos destacados (ejemplo)
     const destacados = destacadosIds
         .map((id) => productos.find((producto) => producto.id === id))
         .filter(Boolean);

@@ -6,7 +6,7 @@ const portatiles = [
       precio: 1200,
       descripcion: "Laptop de alto rendimiento",
       imagen: "images/productos/portatiles/Asus_scar18.png",
-      fecha: new Date("2026-02-07")
+      fecha: new Date("2026-02-12")
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const portatiles = [
       precio: 1400,
       descripcion: "Laptop con pantalla 4K",
       imagen: "images/productos/portatiles/Macbook Pro 16 Pulgadas.png",
-      fecha: new Date("2026-02-03")
+      fecha: new Date("2026-02-12")
     },
     {
       id: 4,
@@ -54,7 +54,7 @@ const pcEnsamblados = [
       precio: 1500,
       descripcion: "PC para trabajo",
       imagen: "images/productos/PC_ensamblados/Toore-Rey.png",
-      fecha: new Date("2026-02-07")
+      fecha: new Date("2026-02-12")
     }
 ];
 
@@ -66,7 +66,7 @@ const sillas = [
       precio: 300,
       descripcion: "Silla ergonómica con soporte lumbar",
       imagen: "images/productos/sillas/razer-iskur-v2-x-ergonomic-gaming-chair-black.png",
-      fecha: new Date("2026-01-30")
+      fecha: new Date("2026-02-12")
     },
     {
       id: 8,
@@ -222,7 +222,7 @@ const componentes = [
       precio: 350,
       descripcion: "Gabinete con ventiladores RGB",
       imagen: "images/productos/componentes/chasis/ASUS ROG Hyperion GR701 Edición EVA-02.png",
-      fecha: new Date("2026-02-09")
+      fecha: new Date("2026-02-12")
     },
     {
       id: 23,
