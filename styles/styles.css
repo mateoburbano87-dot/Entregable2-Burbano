@@ -63,12 +63,12 @@ header .navbar .navbar-nav {
 
 header .titulo_web {
 	font-family: "Nabla", system-ui; /* Fuente del título */
-	color: #00d4ff; /* Color del título */
-	font-size: 4rem; /* Tamaño del título */
+	color: #00d4ff; 
+	font-size: 4rem; 
 	font-weight: 400; /* Grosor de la fuente */
 	letter-spacing: 0.125rem; /* Espaciado entre letras */
 	margin: 0; /* Quita margen */
-	text-transform: uppercase; /* Pasa a mayúsculas */
+	text-transform: uppercase; 
 	text-shadow: 0 0.25rem 0.5rem rgba(0, 212, 255, 0.3); /* Sombra del texto */
 	transition: all 0.3s ease; /* Transiciones suaves */
 	line-height: 1; /* Altura de línea */
@@ -78,10 +78,10 @@ header .titulo_web {
 /* Contenedor del header */
 
 .header_container { 
-	display: flex; /* Usa flexbox */
+	display: flex; 
 	flex-direction: row; /* Dirección en fila */
 	align-items: center; /* Centra verticalmente */
-	gap: 1.5rem; /* Separación entre elementos */
+	gap: 1.5rem; 
 	justify-content: center; /* Centra horizontalmente */
 } 
 
@@ -110,7 +110,7 @@ header .custom-navbar {
 
 .navbar-brand { 
 	color: #00d4ff; /* Color del texto */
-	font-size: 3rem; /* Tamaño de fuente */
+	font-size: 3rem; 
 	font-weight: 700; /* Grosor de fuente */
 	transition: color 0.3s ease; /* Transición de color */
 	margin-left: 10rem; /* Margen izquierdo */
@@ -119,15 +119,15 @@ header .custom-navbar {
 /* Hover del brand */
 
 .navbar-brand:hover { 
-	color: #00aaff; /* Color al pasar el mouse */
+	color: #00aaff; 
 } 
 
 /* Enlaces del nav */
 
 .navbar-nav .nav-link, 
 .dropdown-menu .dropdown-item { /* Items del dropdown */
-	color: #c7d2ff; /* Color de enlaces */
-	font-size: 2.5rem; /* Tamaño de fuente */
+	color: #c7d2ff; 
+	font-size: 2.5rem; 
 	font-weight: 500; /* Grosor de fuente */
 	transition: color 0.2s ease, background-color 0.2s ease, text-shadow 0.2s ease; /* Transiciones */
 } 
@@ -189,7 +189,7 @@ header .custom-navbar .dropdown-menu.show {
 
 .dropdown-submenu-open > .dropdown-menu { 
 	position: static; /* Mismo flujo */
-	display: block; /* Visible */
+	display: block; 
 	margin-top: 0.25rem; /* Separación */
 }
 
@@ -208,10 +208,10 @@ header .custom-navbar .dropdown-menu.show {
 /* Submenú horizontal visible */
 
 header .submenu-horizontal .dropdown-menu.show { 
-	display: flex; /* Usa flexbox */
+	display: flex; 
 	flex-direction: row; /* Dirección en fila */
 	align-items: center; /* Centra verticalmente */
-	gap: 1rem; /* Separación entre items */
+	gap: 1rem; 
 	white-space: nowrap; /* Evita saltos de línea */
 } 
 
@@ -282,7 +282,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 
 .featured-subtitle { 
 	font-family: "DM Serif Text", serif;
-	font-size: 2rem; /* Tamaño del subtítulo */
+	font-size: 2rem; 
 	color: #c7d2ff; /* Color del subtítulo */
 	margin-bottom: 2.5rem; /* Margen inferior */
 } 
@@ -290,7 +290,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 /* Grilla de productos */
 
 .featured-grid { 
-	display: grid; /* Usa grid */
+	display: grid; 
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Columnas automáticas */
 	gap: 2rem; /* Espacio entre tarjetas */
 	justify-content: center; /* Centra las tarjetas */
@@ -311,7 +311,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 /* Card de producto */
 
 .featured-card { 
-	background: rgba(26, 26, 46, 0.6); /* Fondo de la tarjeta */
+	background: rgba(26, 26, 46, 0.6); 
 	border-radius: 1.25rem; /* Bordes redondeados */
 	overflow: hidden; /* Oculta desbordes */
 	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.35); /* Sombra */
@@ -421,8 +421,8 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 
 .featured-name {
 	font-family: "VT323", monospace;
-	font-size: 2rem; /* Tamaño del nombre */
-	color: #e0e0e0; /* Color del nombre */
+	font-size: 2rem; 
+	color: #e0e0e0; 
 	margin-bottom: 0.5rem; /* Margen inferior */
 } 
 
@@ -437,7 +437,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 /* Precio del producto */
 
 .featured-price { 
-	color: #f2f6ff; /* Color */
+	color: #f2f6ff; 
 	font-weight: 700; /* Grosor */
 	margin-bottom: 1rem; /* Margen */
 } 
@@ -447,7 +447,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 .featured-button { 
 	background: transparent; /* Fondo transparente */
 	border: 1px solid #00d4ff; /* Borde del botón */
-	color: #00d4ff; /* Color del texto */
+	color: #00d4ff; 
 	padding: 0.6rem 1.4rem; /* Padding del botón */
 	border-radius: 999px; /* Bordes redondos */
 	font-weight: 600; /* Grosor del texto */
@@ -483,9 +483,9 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 /* Título */
 
 .shipping-title { 
-	font-family: "Germania One", system-ui; /* Fuente */
-	font-size: 3rem; /* Tamaño */
-	color: #00d4ff; /* Color */
+	font-family: "Germania One", system-ui; 
+	font-size: 3rem; 
+	color: #00d4ff; 
 	margin-bottom: 0.5rem; /* Margen */
 } 
 
@@ -499,7 +499,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 /* Tarjeta del formulario */
 
 .shipping-card { 
-	background: rgba(26, 26, 46, 0.6); /* Fondo */
+	background: rgba(26, 26, 46, 0.6); 
 	border-radius: 1.25rem; /* Bordes */
 	padding: 2rem; /* Espaciado */
 	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.35); /* Sombra */
@@ -509,17 +509,17 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 /* Grilla del formulario */
 
 .shipping-grid { 
-	display: grid; /* Grid */
+	display: grid; 
 	grid-template-columns: repeat(2, minmax(0, 1fr)); /* Dos columnas */
-	gap: 1.5rem; /* Espaciado */
+	gap: 1.5rem; 
 } 
 
 /* Campo */
 
 .shipping-field { 
-	display: flex; /* Flex */
+	display: flex; 
 	flex-direction: column; /* Columna */
-	gap: 0.5rem; /* Espaciado */
+	gap: 0.5rem; 
 } 
 
 /* Campo ancho */
@@ -531,7 +531,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 /* Label */
 
 .shipping-label { 
-	color: #e0e0e0; /* Color */
+	color: #e0e0e0; 
 	font-weight: 600; /* Grosor */
 } 
 
@@ -540,10 +540,10 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 .shipping-input,
 .shipping-select,
 .shipping-textarea { 
-	background: rgba(15, 52, 96, 0.5); /* Fondo */
+	background: rgba(15, 52, 96, 0.5); 
 	border: 1px solid rgba(0, 212, 255, 0.35); /* Borde */
 	border-radius: 0.75rem; /* Bordes */
-	color: #f2f6ff; /* Color */
+	color: #f2f6ff; 
 	padding: 0.75rem 1rem; /* Espaciado */
 	outline: none; /* Sin outline */
 } 
@@ -561,7 +561,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 
 .shipping-actions { 
 	margin-top: 1.5rem; /* Margen */
-	display: flex; /* Flex */
+	display: flex; 
 	flex-wrap: wrap; /* Ajuste */
 	align-items: center; /* Centrado */
 	gap: 1rem; /* Espaciado */
@@ -644,9 +644,9 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 /* Título de marcas */
 
 .brands-title { 
-	font-family: "Germania One", system-ui; /* Fuente */
-	font-size: 2.5rem; /* Tamaño */
-	color: #00d4ff; /* Color */
+	font-family: "Germania One", system-ui; 
+	font-size: 2.5rem; 
+	color: #00d4ff; 
 	margin-bottom: 0.5rem; /* Margen inferior */
 } 
 
@@ -667,7 +667,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 /* Pista del carrusel */
 
 .brands-track { 
-	display: grid; /* Usa grid */
+	display: grid; 
 	grid-auto-flow: column; /* Flujo horizontal */
 	grid-auto-columns: minmax(160px, 1fr); /* Ancho de columnas */
 	gap: 1rem; /* Separación */
@@ -765,7 +765,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 
 .contacto-section .section-title::after {
 	content: ""; /* Elemento */
-	display: block; /* Bloque */
+	display: block; 
 	width: 60%; /* Ancho */
 	max-width: 520px; /* Máximo */
 	height: 2px; /* Alto */
@@ -788,7 +788,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 /* Fila de tarjetas */
 
 .contacto-row { 
-	display: grid; /* Grid */
+	display: grid; 
 	grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columnas */
 	gap: 1.5rem; /* Separación */
 } 
@@ -813,7 +813,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 	margin-top: 1rem; /* Margen superior */
 	margin-bottom: 0.75rem; /* Margen inferior */
 	font-size: 1.4rem; /* Tamaño */
-	color: #f2f6ff; /* Color */
+	color: #f2f6ff; 
 	text-transform: capitalize; /* Capitaliza */
 } 
 
@@ -821,7 +821,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 
 .contacto-card p { 
 	margin: 0; /* Sin margen */
-	color: #d7def8; /* Color */
+	color: #d7def8; 
 	font-weight: 500; /* Grosor */
 } 
 
@@ -831,12 +831,12 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 	width: 60px; /* Ancho */
 	height: 60px; /* Alto */
 	border-radius: 50%; /* Circular */
-	display: grid; /* Grid */
+	display: grid; 
 	place-items: center; /* Centra */
 	margin: 0 auto; /* Centra */
 	background: #2c3b6b; /* Fondo */
 	border: 2px solid #00d4ff; /* Borde */
-	color: #00d4ff; /* Color */
+	color: #00d4ff; 
 	font-size: 1.5rem; /* Tamaño */
 	box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.25); /* Sombra */
 } 
@@ -851,16 +851,16 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
  /* Título redes */
 
 .redes-sociales h3 {
-	font-family: "Germania One", system-ui; /* Fuente */
-	font-size: 1.8rem; /* Tamaño */
-	color: #f2f6ff; /* Color */
+	font-family: "Germania One", system-ui; 
+	font-size: 1.8rem; 
+	color: #f2f6ff;
 	margin-bottom: 1.5rem; /* Margen */
 } 
 
 /* Contenedor iconos */
 
 .social-icons { 
-	display: flex; /* Flex */
+	display: flex; 
 	justify-content: center; /* Centra */
 	gap: 1rem; /* Separación */
 	flex-wrap: wrap; /* Ajuste */
@@ -931,8 +931,8 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 	width: 16px; /* Ancho */
 	height: 16px; /* Alto */
 	border-radius: 50%; /* Circular */
-	background: #00d4ff; /* Fondo */
-	color: #0a0a0a; /* Color texto */
+	background: #00d4ff; 
+	color: #0a0a0a; 
 	font-size: 0.7rem; /* Tamaño */
 	text-align: center; /* Centrado */
 	line-height: 16px; /* Centrado vertical */
@@ -943,7 +943,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 .cart-overlay { 
 	position: fixed; /* Fijo */
 	inset: 0; /* Cubre todo */
-	background: rgba(0, 0, 0, 0.5); /* Oscuro */
+	background: rgba(0, 0, 0, 0.5); 
 	opacity: 0; /* Oculto */
 	visibility: hidden; /* Oculto */
 	transition: opacity 0.2s ease; /* Transición */
@@ -1016,9 +1016,9 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 /* Título */
 
 .cart-title { 
-	font-family: "Germania One", system-ui; /* Fuente */
-	font-size: 2.5rem; /* Tamaño */
-	color: #00d4ff; /* Color */
+	font-family: "Germania One", system-ui; 
+	font-size: 2.5rem; 
+	color: #00d4ff; 
 } 
 
 /* Botón cerrar */
@@ -1026,23 +1026,23 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 .cart-close { 
 	border: none; /* Sin borde */
 	background: transparent; /* Fondo */
-	color: #f2f6ff; /* Color */
-	font-size: 1.2rem; /* Tamaño */
+	color: #f2f6ff; 
+	font-size: 1.2rem; 
 } 
 
 /* Contador */
 
 .cart-count { 
-	color: #c7d2ff; /* Color */
-	font-size: 1.1rem; /* Tamaño */
+	color: #c7d2ff; 
+	font-size: 1.1rem; 
 } 
 
 /* Último producto agregado */
 
 .cart-last {
 	margin-bottom: 0.75rem; /* Separación inferior */
-	color: #a9b7ff; /* Color */
-	font-size: 0.95rem; /* Tamaño */
+	color: #a9b7ff; 
+	font-size: 0.95rem; 
 } 
 
 /* Mensaje vacío */
@@ -1050,20 +1050,20 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 .cart-empty { 
 	padding: 1rem; /* Espaciado */
 	text-align: center; /* Centrado */
-	color: #a9b7ff; /* Color */
+	color: #a9b7ff; 
 } 
 
 /* Lista */
 
 .cart-list { 
-	display: grid; /* Grid */
+	display: grid; 
 	gap: 1rem; /* Separación */
 } 
 
 /* Item del carrito */
 
 .cart-item { 
-	display: grid; /* Grid */
+	display: grid; 
 	grid-template-columns: 1fr auto; /* Dos columnas */
 	gap: 1rem; /* Separación */
 	align-items: center; /* Centrado */
@@ -1076,7 +1076,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 /* Info */
 
 .cart-item-info { 
-	display: flex; /* Flex */
+	display: flex; 
 	gap: 1rem; /* Separación */
 	align-items: center; /* Centrado */
 } 
@@ -1094,7 +1094,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 
 .cart-item-name { 
 	margin: 0; /* Sin margen */
-	color: #f2f6ff; /* Color */
+	color: #f2f6ff; 
 	font-weight: 600; /* Grosor */
 } 
 
@@ -1102,15 +1102,15 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 
 .cart-item-price { 
 	margin: 0.2rem 0 0; /* Margen */
-	color: #a9b7ff; /* Color */
+	color: #a9b7ff; 
 } 
 
 /* Acciones */
 
 .cart-item-actions { 
-	display: flex; /* Flex */
+	display: flex; 
 	align-items: center; /* Centrado */
-	gap: 0.75rem; /* Separación */
+	gap: 0.75rem; 
 	flex-wrap: wrap; /* Ajuste */
 }
 
@@ -1121,8 +1121,8 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 	height: 32px; /* Alto */
 	border-radius: 50%; /* Circular */
 	border: 1px solid #00d4ff; /* Borde */
-	background: transparent; /* Fondo */
-	color: #00d4ff; /* Color */
+	background: transparent; 
+	color: #00d4ff; 
 } 
 
 /* Número de cantidad */
@@ -1135,7 +1135,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 /* Subtotal */
 
 .cart-item-subtotal { 
-	color: #f2f6ff; /* Color */
+	color: #f2f6ff; 
 	font-weight: 600; /* Grosor */
 } 
 
@@ -1143,8 +1143,8 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 
 .cart-remove { 
 	border: none; /* Sin borde */
-	background: #2b3a6b; /* Fondo */
-	color: #f2f6ff; /* Color */
+	background: #2b3a6b; 
+	color: #f2f6ff; 
 	padding: 0.4rem 0.8rem; /* Espaciado */
 	border-radius: 0.5rem; /* Bordes */
 } 
@@ -1153,25 +1153,25 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 
 .cart-summary { 
 	margin-top: 1.5rem; /* Margen */
-	display: flex; /* Flex */
+	display: flex; 
 	justify-content: space-between; /* Separación */
 	align-items: center; /* Centrado */
 	flex-wrap: wrap; /* Ajuste */
-	gap: 1rem; /* Separación */
+	gap: 1rem; 
 } 
 
 /* Total */
 
 .cart-total { 
-	font-size: 1.25rem; /* Tamaño */
-	color: #f2f6ff; /* Color */
+	font-size: 1.25rem; 
+	color: #f2f6ff; 
 } 
 
 /* Acciones */
 
 .cart-actions { 
-	display: flex; /* Flex */
-	gap: 0.75rem; /* Separación */
+	display: flex; 
+	gap: 0.75rem; 
 } 
 
 /* Botones del carrito */
@@ -1179,7 +1179,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 .cart-button { 
 	border: 1px solid #00d4ff; /* Borde */
 	background: transparent; /* Fondo */
-	color: #00d4ff; /* Color */
+	color: #00d4ff; 
 	padding: 0.6rem 1.4rem; /* Espaciado */
 	border-radius: 999px; /* Bordes */
 	font-weight: 600; /* Grosor */
@@ -1189,7 +1189,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 
 .cart-button:hover { 
 	background: #00d4ff; /* Fondo */
-	color: #0a0a0a; /* Color */
+	color: #0a0a0a; 
 } 
 
 /* Responsive carrito */
@@ -1212,7 +1212,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 
 .footer { 
 	font-family: "Germania One", system-ui;
-	font-size: 2rem; /* Fuente y tamaño */
+	font-size: 2rem; 
 	background: rgba(10, 12, 28, 0.95); /* Fondo oscuro */
 	padding: 2rem 1.5rem; /* Espaciado */
 	border-top: 1px solid rgba(0, 212, 255, 0.2); /* Borde superior */
@@ -1223,7 +1223,7 @@ header .submenu-horizontal .dropdown-menu .dropdown-item {
 
 .footer p { 
 	margin: 0; /* Sin margen */
-	color: #c7d2ff; /* Color */
+	color: #c7d2ff; 
 	font-weight: 600; /* Grosor */
 	letter-spacing: 0.03rem; /* Espaciado */
 } 
