@@ -1,7 +1,7 @@
-@use "variables";
+﻿@use "variables";
 
 // Extends (placeholders reutilizables)
-%uppercase { // Convierte el texto a mayúsculas
+%uppercase { // Convierte el texto a mayÃºsculas
 	text-transform: uppercase;
 }
 
@@ -10,7 +10,7 @@
 }
 
 %text-shadow-primary { // Sombra de texto con color principal
-	text-shadow: variables.$shadow-xs;
+	text-shadow: variables.$sombra-xs;
 }
 
 %no-list { // Quita estilos de lista
@@ -24,14 +24,15 @@
 	color: inherit;
 }
 
-%shadow-card { // Sombra estándar de tarjeta
-	box-shadow: variables.$shadow-md;
+%shadow-card { // Sombra estÃ¡ndar de tarjeta
+	box-shadow: variables.$sombra-md;
 }
 
 %shadow-hover { // Sombra hover
-	box-shadow: variables.$shadow-lg;
+	box-shadow: variables.$sombra-lg;
 }
 
 %rounded-lg { // Bordes redondeados grandes
-	border-radius: variables.$border-radius-lg;
+	border-radius: variables.$borde-radio-grande;
 }
+

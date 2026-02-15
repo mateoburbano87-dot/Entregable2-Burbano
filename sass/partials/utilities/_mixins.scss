@@ -1,4 +1,4 @@
-@use "variables";
+﻿@use "variables";
 
 // Mixins reutilizables
 @mixin flex-center($direction: row, $gap: null, $justify: center, $align: center) { // Flex con centrado configurable
@@ -22,7 +22,7 @@
 	transition: $value;
 }
 
-@mixin text-style($size: null, $weight: null, $line-height: null, $letter-spacing: null, $transform: null) { // Atajo de tipografía
+@mixin text-style($size: null, $weight: null, $line-height: null, $letter-spacing: null, $transform: null) { // Atajo de tipografÃ­a
 	@if $size != null {
 		font-size: $size;
 	}
@@ -44,13 +44,13 @@
 	backdrop-filter: blur($value);
 }
 
-@mixin card-base($bg, $radius: variables.$border-radius-lg, $shadow: variables.$shadow-md) { // Base para tarjetas
+@mixin card-base($bg, $radius: variables.$borde-radio-grande, $shadow: variables.$sombra-md) { // Base para tarjetas
 	background: $bg;
 	border-radius: $radius;
 	box-shadow: $shadow;
 }
 
-@mixin grid-cols($cols, $gap: variables.$spacing-gap-md) { // Grid con columnas fijas
+@mixin grid-cols($cols, $gap: variables.$espaciado-gap-medio) { // Grid con columnas fijas
 	display: grid;
 	grid-template-columns: repeat($cols, minmax(0, 1fr));
 	gap: $gap;
@@ -73,7 +73,7 @@
 	height: $height;
 }
 
-@mixin circle($size) { // Crea un círculo perfecto
+@mixin circle($size) { // Crea un cÃ­rculo perfecto
 	@include size($size);
 	border-radius: 50%;
 }
@@ -93,7 +93,7 @@
 	}
 }
 
-@mixin clamp-font($min, $preferred, $max) { // Tamaño de fuente fluido
+@mixin clamp-font($min, $preferred, $max) { // TamaÃ±o de fuente fluido
 	font-size: clamp($min, $preferred, $max);
 }
 
@@ -109,3 +109,4 @@
 		-webkit-box-orient: vertical;
 	}
 }
+

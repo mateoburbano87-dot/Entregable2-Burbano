@@ -1,71 +1,76 @@
 // Tipografías
-$font-base: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-$font-title: "Nabla", system-ui;
-$font-display: "Germania One", system-ui;
+$fuente-base: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; // Se usa para el cuerpo del texto general
+$fuente-h1: "Nabla", system-ui; // Se usa para títulos principales (h1)
+$fuente-h2: "Germania One", system-ui; // Se usa para subtítulos destacados (h2)
+$fuente-bodoni: "Bodoni Moda SC", serif; // Fuente elegante con serifa
+$fuente-dm: "DM Serif Text", serif; // Fuente con serifa para textos formales
+$fuente-vt323: "VT323", monospace; // Fuente estilo terminal/retro
+$fuente-limelight: "Limelight", cursive; // Fuente estilo art déco/cine
 
 // Colores base (texto)
-$color-text-base: #e0e0e0;
-$color-text-muted: #c7d2ff;
-$color-text-soft: #a9b7ff;
-$color-text-light: #f2f6ff;
-$color-text-secondary: #d7def8;
+$color-texto-base: #e0e0e0; // Color principal del texto
+$color-texto-tenue: #c7d2ff; // Color para texto secundario o menos relevante
+$color-texto-suave: #a9b7ff; // Color suave para descripciones
+$color-texto-claro: #f2f6ff; // Color muy claro, casi blanco
+$color-texto-secundario: #d7def8; // Variación secundaria del texto
 
 // Colores de marca
-$color-primary: #00d4ff;
-$color-primary-hover: #00aaff;
-$color-primary-contrast: #0a0a0a;
+$color-primario: #00d4ff; // Color principal de la marca (cyan)
+$color-primario-hover: #00aaff; // Color al pasar el mouse por elementos primarios
+$color-primario-contraste: #0a0a0a; // Color oscuro para contrastar con el primario
 
 // Colores de fondo (sólidos)
-$color-bg-dark-900: #0a0a0a;
-$color-bg-dark-800: #1a1a2e;
-$color-bg-dark-700: #16213e;
-$color-bg-dark-600: #0f3460;
-$color-bg-nav: rgba(26, 26, 46, 0.7);
-$color-bg-header: rgba(26, 26, 46, 0.6);
-$color-bg-card: rgba(26, 26, 46, 0.6);
-$color-bg-contact: rgba(40, 52, 96, 0.9);
-$color-bg-contact-icon: #2c3b6b;
-$color-bg-social: rgba(35, 45, 86, 0.95);
-$color-bg-brands: rgba(20, 30, 60, 0.95);
-$color-bg-brands-alt: rgba(15, 52, 96, 0.85);
-$color-bg-brand-item: rgba(38, 48, 86, 0.9);
-$color-bg-button: #2b3a6b;
+$color-fondo-oscuro-900: #0a0a0a; // Fondo muy oscuro
+$color-fondo-oscuro-800: #1a1a2e; // Fondo oscuro nivel 800
+$color-fondo-oscuro-700: #16213e; // Fondo oscuro nivel 700
+$color-fondo-oscuro-600: #0f3460; // Fondo oscuro nivel 600
+$color-fondo-nav: rgba(26, 26, 46, 0.7); // Fondo semitransparente para navegación
+$color-fondo-header: rgba(26, 26, 46, 0.6); // Fondo semitransparente para encabezado
+$color-fondo-tarjeta: rgba(26, 26, 46, 0.6); // Fondo semitransparente para tarjetas
+$color-fondo-contacto: rgba(40, 52, 96, 0.9); // Fondo sección contacto
+$color-fondo-icono-contacto: #2c3b6b; // Fondo para iconos de contacto
+$color-fondo-social: rgba(35, 45, 86, 0.95); // Fondo redes sociales
+$color-fondo-marcas: rgba(20, 30, 60, 0.95); // Fondo sección marcas
+$color-fondo-marcas-alt: rgba(15, 52, 96, 0.85); // Fondo alternativo marcas
+$color-fondo-item-marca: rgba(38, 48, 86, 0.9); // Fondo item individual marca
+$color-fondo-boton: #2b3a6b; // Fondo de botones
 
 // Gradientes
-$gradient-body: linear-gradient(135deg, $color-bg-dark-900 0%, $color-bg-dark-800 25%, $color-bg-dark-700 50%, $color-bg-dark-600 75%, $color-bg-dark-800 100%);
-$gradient-image: linear-gradient(135deg, rgba(0, 212, 255, 0.35), rgba(15, 52, 96, 0.6));
-$gradient-contact: linear-gradient(180deg, #2a325b 0%, #2d3a6f 100%);
-$gradient-divider: linear-gradient(90deg, rgba(0, 212, 255, 0.9), rgba(0, 212, 255, 0.05));
-$gradient-brands: linear-gradient(135deg, $color-bg-brands, $color-bg-brands-alt);
+$gradiente-cuerpo: linear-gradient(135deg, $color-fondo-oscuro-900 0%, $color-fondo-oscuro-800 25%, $color-fondo-oscuro-700 50%, $color-fondo-oscuro-600 75%, $color-fondo-oscuro-800 100%); // Gradiente principal del fondo
+$gradiente-imagen: linear-gradient(135deg, rgba(0, 212, 255, 0.35), rgba(15, 52, 96, 0.6)); // Gradiente superpuesto en imágenes
+$gradiente-contacto: linear-gradient(180deg, #2a325b 0%, #2d3a6f 100%); // Gradiente sección contacto
+$gradiente-separador: linear-gradient(90deg, rgba(0, 212, 255, 0.9), rgba(0, 212, 255, 0.05)); // Gradiente para líneas divisorias
+$gradiente-marcas: linear-gradient(135deg, $color-fondo-marcas, $color-fondo-marcas-alt); // Gradiente marcas
 
 // Bordes
-$border-radius-sm: 0.75rem;
-$border-radius-md: 0.85rem;
-$border-radius-lg: 1.25rem;
-$border-pill: 999px;
-$border-primary-soft: 1px solid rgba(0, 212, 255, 0.18);
-$border-primary: 1px solid #00d4ff;
+$borde-pequeno: 0.75rem; // Radio de borde pequeño
+$borde-medio: 0.85rem; // Radio de borde medio
+$borde-grande: 1.25rem; // Radio de borde grande
+$borde-pill: 999px; // Borde completamente redondo (pill)
+$borde-primario-suave: 1px solid rgba(0, 212, 255, 0.18); // Borde primario sutil
+$borde-primario: 1px solid #00d4ff; // Borde primario sólido
 
 // Sombras
-$shadow-xs: 0 0.25rem 0.5rem rgba(0, 212, 255, 0.3);
-$shadow-sm: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.25);
-$shadow-md: 0 1rem 2rem rgba(0, 0, 0, 0.35);
-$shadow-lg: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.4);
+$sombra-xs: 0 0.25rem 0.5rem rgba(0, 212, 255, 0.3); // Sombra extra pequeña
+$sombra-sm: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.25); // Sombra pequeña
+$sombra-md: 0 1rem 2rem rgba(0, 0, 0, 0.35); // Sombra media
+$sombra-lg: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.4); // Sombra grande
 
 // Tamaños de fuente
-$font-size-brand: 3rem;
-$font-size-title: 4rem;
-$font-size-section: 3rem;
-$font-size-subtitle: 1.8rem;
-$font-size-card-title: 1.4rem;
-$font-size-card-name: 1.5rem;
-$font-size-card-name-lg: 1.75rem;
-$font-size-card-desc-lg: 1.1rem;
-$font-size-nav: 2.5rem;
+$tamano-logo: 3rem; // Tamaño fuente logo/marca
+$tamano-h1: 4rem; // Tamaño fuente H1 (títulos principales)
+$tamano-h2: 3rem; // Tamaño fuente H2 (títulos de sección)
+$tamano-h3: 1.8rem; // Tamaño fuente H3 (subtítulos)
+$tamano-h4: 1.4rem; // Tamaño fuente H4 (títulos de tarjetas)
+$tamano-h5: 1.5rem; // Tamaño fuente H5 (nombres de productos)
+$tamano-h5-lg: 1.75rem; // Tamaño fuente H5 grande (en destacados)
+$tamano-texto-md: 1.1rem; // Tamaño texto mediano (descripciones destacadas)
+$tamano-nav: 2.5rem; // Tamaño fuente navegación
 
 // Espaciados
-$spacing-section-y: 4rem;
-$spacing-section-x: 1.5rem;
-$spacing-gap-lg: 2rem;
-$spacing-gap-md: 1.5rem;
+$espaciado-seccion-y: 4rem; // Espaciado vertical secciones
+$espaciado-seccion-x: 1.5rem; // Espaciado horizontal secciones
+$espaciado-gap-grande: 2rem; // Gap grande
+$espaciado-gap-medio: 1.5rem; // Gap medio
+
 

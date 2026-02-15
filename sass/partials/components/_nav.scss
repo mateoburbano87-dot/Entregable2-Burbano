@@ -1,9 +1,9 @@
-@use "../utilities/variables";
+﻿@use "../utilities/variables";
 @use "../utilities/mixins";
 @use "../utilities/extend";
 
 header { /* Estilos del encabezado */
-	background: variables.$color-bg-header; /* Fondo semi-transparente */
+	background: variables.$color-fondo-header; /* Fondo semi-transparente */
 	@include mixins.backdrop-blur(0.625rem); /* Desenfoque del fondo */
 	padding: 1.25rem 0; /* Espaciado vertical */
 	position: relative; /* Posicionamiento relativo */
@@ -20,7 +20,7 @@ header { /* Estilos del encabezado */
 	}
 
 	.nav-container-centered { /* Contenedor centrado del nav */
-		max-width: 1200px; /* Ancho máximo */
+		max-width: 1200px; /* Ancho mÃ¡ximo */
 		margin: 0 auto; /* Centra el contenedor */
 
 		.navbar-collapse { /* Ajustes del collapse centrado */
@@ -29,19 +29,19 @@ header { /* Estilos del encabezado */
 		}
 	}
 
-	.titulo_web { /* Estilos del título principal */
-		font-family: variables.$font-title; /* Fuente del título */
-		color: variables.$color-primary; /* Color del título */
-		@include mixins.text-style(variables.$font-size-title, 400, 1, 0.125rem); /* Tamaño y ritmo */
+	.titulo_web { /* Estilos del tÃ­tulo principal */
+		font-family: variables.$fuente-h1; /* Fuente del tÃ­tulo */
+		color: variables.$color-primario; /* Color del tÃ­tulo */
+		@include mixins.text-style(variables.$tamano-h1, 400, 1, 0.125rem); /* TamaÃ±o y ritmo */
 		margin: 0; /* Quita margen */
-		@extend %uppercase; /* Mayúsculas */
+		@extend %uppercase; /* MayÃºsculas */
 		@extend %text-shadow-primary; /* Sombra del texto */
 		@include mixins.transition(all 0.3s ease); /* Transiciones suaves */
-		filter: grayscale(1) brightness(1.3) contrast(1.2) hue-rotate(180deg) saturate(3); /* Efecto del título */
+		filter: grayscale(1) brightness(1.3) contrast(1.2) hue-rotate(180deg) saturate(3); /* Efecto del tÃ­tulo */
 	}
 
 	.custom-navbar { /* Fondo personalizado del navbar */
-		background-color: variables.$color-bg-nav; /* Color de fondo */
+		background-color: variables.$color-fondo-nav; /* Color de fondo */
 	}
 
 	.hover-text-only {
@@ -51,7 +51,7 @@ header { /* Estilos del encabezado */
 		.dropdown-menu .dropdown-item:hover,
 		.dropdown-menu .dropdown-item:focus,
 		.dropdown-menu .dropdown-item.active { /* Activo dropdown */
-			color: variables.$color-primary; /* Color del texto */
+			color: variables.$color-primario; /* Color del texto */
 			background-color: transparent; /* Sin fondo */
 			text-shadow: none; /* Sin sombra */
 		}
@@ -59,15 +59,15 @@ header { /* Estilos del encabezado */
 
 	.submenu-horizontal {
 		.dropdown-menu.show,
-		.dropdown-submenu:hover > .dropdown-menu { /* Submenú horizontal en hover */
+		.dropdown-submenu:hover > .dropdown-menu { /* SubmenÃº horizontal en hover */
 			@include mixins.flex-center(row, 1rem, null, center); /* Flex sin justificar */
-			white-space: nowrap; /* Evita saltos de línea */
+			white-space: nowrap; /* Evita saltos de lÃ­nea */
 		}
 	}
 
 	.submenu-centered {
 		.dropdown-menu.show,
-		.dropdown-submenu:hover > .dropdown-menu { /* Submenú centrado en hover */
+		.dropdown-submenu:hover > .dropdown-menu { /* SubmenÃº centrado en hover */
 			position: fixed; /* Posiciona fijo */
 			left: 50%; /* Centra horizontalmente */
 			transform: translateX(-50%); /* Ajusta al centro */
@@ -81,31 +81,31 @@ header { /* Estilos del encabezado */
 } /* Cierra contenedor del header */
 
 .header_container .logo img { /* Imagen del logo */
-	max-height: 15rem; /* Alto máximo del logo */
+	max-height: 15rem; /* Alto mÃ¡ximo del logo */
 	filter: brightness(0.9) drop-shadow(0 0.25rem 0.5rem rgba(0, 212, 255, 0.3)); /* Filtro del logo */
-	@include mixins.transition(all 0.3s ease); /* Transición suave */
+	@include mixins.transition(all 0.3s ease); /* TransiciÃ³n suave */
 } /* Cierra estilos del logo */
 
 nav { /* Estilos base del nav */
-	font-family: variables.$font-display; /* Fuente del nav */
+	font-family: variables.$fuente-h2; /* Fuente del nav */
 } /* Cierra estilos del nav */
 
 .navbar-brand { /* Estilos del texto de marca */
-	color: variables.$color-primary; /* Color del texto */
-	font-size: variables.$font-size-brand; /* Tamaño de fuente */
+	color: variables.$color-primario; /* Color del texto */
+	font-size: variables.$tamano-logo; /* TamaÃ±o de fuente */
 	font-weight: 700; /* Grosor de fuente */
-	@include mixins.transition(color 0.3s ease); /* Transición de color */
+	@include mixins.transition(color 0.3s ease); /* TransiciÃ³n de color */
 	margin-left: 10rem; /* Margen izquierdo */
 
 	&:hover { /* Hover del brand */
-		color: variables.$color-primary-hover; /* Color al pasar el mouse */
+		color: variables.$color-primario-hover; /* Color al pasar el mouse */
 	}
 } /* Cierra estilos de navbar-brand */
 
 .navbar-nav .nav-link,
 .dropdown-menu .dropdown-item { /* Enlaces del nav / Items del dropdown */
-	color: variables.$color-text-muted; /* Color de enlaces */
-	@include mixins.text-style(variables.$font-size-nav, 500); /* Tamaño de fuente */
+	color: variables.$color-texto-tenue; /* Color de enlaces */
+	@include mixins.text-style(variables.$tamano-nav, 500); /* TamaÃ±o de fuente */
 	@include mixins.transition(color 0.2s ease, background-color 0.2s ease, text-shadow 0.2s ease); /* Transiciones */
 } /* Cierra estilos de enlaces */
 
@@ -115,29 +115,31 @@ nav { /* Estilos base del nav */
 .dropdown-menu .dropdown-item:hover,
 .dropdown-menu .dropdown-item:focus,
 .dropdown-menu .dropdown-item.active { /* Item activo */
-	color: variables.$color-primary; /* Color al activar */
+	color: variables.$color-primario; /* Color al activar */
 	text-shadow: 0 0 8px rgba(0, 212, 255, 0.6); /* Sombra del texto */
 } /* Cierra estilos de estados */
 
 .dropdown-menu { /* Estilos del dropdown */
-	padding: 0.25rem; /* Padding del menú */
-	border-radius: variables.$border-radius-sm; /* Bordes redondeados */
+	padding: 0.25rem; /* Padding del menÃº */
+	border-radius: variables.$borde-radio-pequeno; /* Bordes redondeados */
 	overflow: visible; /* Permite desbordes */
 } /* Cierra estilos del dropdown */
 
-.dropdown-submenu { /* Contenedor de submenú */
-	position: relative; /* Posición relativa */
-} /* Cierra submenú */
+.dropdown-submenu { /* Contenedor de submenÃº */
+	position: relative; /* PosiciÃ³n relativa */
+} /* Cierra submenÃº */
 
-.dropdown-submenu:hover > .dropdown-menu { /* Muestra submenú al hover */
-	display: block; /* Hace visible el submenú */
+.dropdown-submenu:hover > .dropdown-menu { /* Muestra submenÃº al hover */
+	display: block; /* Hace visible el submenÃº */
 } /* Cierra comportamiento hover */
 
-.submenu-horizontal .dropdown-menu .dropdown-item { /* Items del submenú */
+.submenu-horizontal .dropdown-menu .dropdown-item { /* Items del submenÃº */
 	white-space: nowrap; /* Evita saltos */
-} /* Cierra items del submenú */
+} /* Cierra items del submenÃº */
 
-.logo-size { /* Tamaño del logo */
+.logo-size { /* TamaÃ±o del logo */
 	width: 20rem; /* Ancho del logo */
-	height: auto; /* Alto automático */
-} /* Cierra tamaño del logo */
+	height: auto; /* Alto automÃ¡tico */
+} /* Cierra tamaÃ±o del logo */
+
+
