@@ -2,13 +2,13 @@
 @use "../utilities/mixins";
 @use "../utilities/extend";
 
-// SecciÃ³n del carrito
+// Sección del carrito
 .cart-section { /* Contenedor del carrito */
 	padding: 3rem variables.$espaciado-seccion-x 5rem; /* Espaciado */
 }
 
 .cart-container { /* Caja principal */
-	max-width: 1100px; /* Ancho mÃ¡ximo */
+	max-width: 1100px; /* Ancho máximo */
 	margin: 0 auto; /* Centrado */
 	@include mixins.card-base(rgba(26, 26, 46, 0.7), variables.$borde-radio-grande, variables.$sombra-md); /* Base */
 	padding: 2rem; /* Espaciado */
