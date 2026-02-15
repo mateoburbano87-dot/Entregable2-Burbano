@@ -14,7 +14,7 @@
 	padding: 2rem; /* Espaciado */
 }
 
-// Boton del carrito en el navbar
+// Botón del carrito en el navbar
 .cart-toggle { /* Botón flotante en el nav */
 	position: relative; /* Para el contador */
 	@include mixins.size(48px); /* Botón cuadrado */
